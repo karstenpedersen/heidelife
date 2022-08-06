@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #22d3ee;
+  --color-primary-variant: #67e8f9;
+  --color-secondary: #f59e0b;
+  --color-secondary-variant: #fbbf24;
+
+  --color-dark: #18181b;
+  --color-gray: #71717a;
+
+  --color-background: #ececec;
+  --color-surface: #ffffff;
+}
+
+body {
+  @apply min-h-screen bg-gradient-to-b from-secondary to-secondary-variant text-dark selection:bg-secondary selection:text-surface;
+}
+
+/* Titles */
+.parent-title {
+  @apply font-bold;
+}
+
+.title-1 {
+  @apply parent-title text-5xl;
+}
+.title-2 {
+  @apply parent-title text-4xl;
+}
+.title-3 {
+  @apply parent-title text-3xl;
+}
+.title-4 {
+  @apply parent-title text-2xl;
+}
+.title-5 {
+  @apply parent-title text-xl;
+}
+.title-6 {
+  @apply parent-title text-lg;
+}
