@@ -13,6 +13,7 @@ const Rules: NextPageWithLayout = () => {
         <title>Regler | Heidelife</title>
         <meta name="description" content="Heidelife.dk's regler" />
         <meta name="og:description" content="Server regler" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       <TitleSection title="Regler" />

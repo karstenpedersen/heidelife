@@ -1,22 +1,25 @@
 import Head from "next/head";
 import { FaExternalLinkAlt, FaSearch } from "react-icons/fa";
-import { faqData } from "../../data/faq.data";
-import FaqContainer from "../components/container/FaqContainer";
-import PageLayout from "../components/layouts/PageLayout";
-import IconLink from "../components/utils/IconLink";
-import ImageBackground from "../components/utils/ImageBackground";
-import Wrapper from "../components/utils/Wrapper";
-import TitleSection from "../sections/TitleSection";
-import { FaqContainer as FaqContainerType } from "../utils/types/faq-container";
-import { NextPageWithLayout } from "../utils/types/page";
+import FaqContainer from "../../components/container/FaqContainer";
+import PageLayout from "../../components/layouts/PageLayout";
+import IconLink from "../../components/utils/IconLink";
+import ImageBackground from "../../components/utils/ImageBackground";
+import Wrapper from "../../components/utils/Wrapper";
+import { getAllFaqContainers } from "../../lib/faqs";
+import TitleSection from "../../sections/TitleSection";
+import { FaqContainer as FaqContainerType } from "../../utils/types/faq-container";
+import { NextPageWithLayout } from "../../utils/types/page";
 
-const FAQ: NextPageWithLayout<{ faqs: FaqContainerType[] }> = ({ faqs }) => {
+const FAQS: NextPageWithLayout<{ faqData: FaqContainerType[] }> = ({
+  faqData,
+}) => {
   return (
     <>
       <Head>
         <title>FAQ | Heidelife</title>
         <meta name="description" content="Få hjælp til dine spørgsmål" />
         <meta name="og:description" content="FAQ - Ofte stillet spørgsmål" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <TitleSection>
         <p className="text-center text-2xl font-bold text-white sm:text-4xl">
@@ -39,13 +42,13 @@ const FAQ: NextPageWithLayout<{ faqs: FaqContainerType[] }> = ({ faqs }) => {
       <section id="faq" className="bg-background py-10 sm:py-14">
         <Wrapper>
           <div className="grid gap-10 md:grid-cols-2">
-            {faqs.map((faq, index) => {
+            {faqData.map((faqContainer, index) => {
               return (
                 <FaqContainer
                   key={index}
-                  title={faq.title}
-                  iconTitle={faq.iconTitle}
-                  items={faq.faqs}
+                  title={faqContainer.title}
+                  iconTitle={faqContainer.iconTitle}
+                  items={faqContainer.faqs}
                 />
               );
             })}
@@ -68,8 +71,6 @@ const FAQ: NextPageWithLayout<{ faqs: FaqContainerType[] }> = ({ faqs }) => {
                 className="rounded bg-primary px-6 py-4 font-semibold text-surface hover:bg-primary-variant"
               />
             </div>
-
-            <div></div>
           </Wrapper>
         </ImageBackground>
       </section>
@@ -77,7 +78,7 @@ const FAQ: NextPageWithLayout<{ faqs: FaqContainerType[] }> = ({ faqs }) => {
   );
 };
 
-FAQ.getLayout = (page) => {
+FAQS.getLayout = (page) => {
   return (
     <>
       <PageLayout>{page}</PageLayout>
@@ -86,13 +87,13 @@ FAQ.getLayout = (page) => {
 };
 
 export async function getStaticProps() {
-  const faqs = faqData;
+  const faqData = await getAllFaqContainers();
 
   return {
     props: {
-      faqs: faqs,
+      faqData,
     },
   };
 }
 
-export default FAQ;
+export default FAQS;

@@ -4,12 +4,12 @@ import IconText from "./IconText";
 const classes = {
   size: {
     md: {
-      icon: "sm:!text-2xl !text-xl",
-      text: "sm:text-3xl text-2xl",
+      icon: "sm:!text-2xl !text-lg",
+      text: "sm:text-3xl text-xl",
     },
     lg: {
-      icon: "sm:!text-3xl !text-xl",
-      text: "sm:text-4xl text-3xl",
+      icon: "sm:!text-3xl !text-lg",
+      text: "sm:text-4xl text-2xl",
     },
   },
   variant: {

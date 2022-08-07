@@ -19,7 +19,7 @@ const Wrapper: React.FC<IWrapper> = ({
       }`}
     >
       <div
-        className={`mx-auto h-full w-[90vw] max-w-[75rem] ${
+        className={`max-w-[75rem mx-auto h-full w-[90vw] ${
           className ?? className
         }`}
       >

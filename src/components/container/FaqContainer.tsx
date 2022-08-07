@@ -47,12 +47,13 @@ const FaqContainer: React.FC<IFaqContainer> = ({ title, items, iconTitle }) => {
             return (
               <li
                 key={index}
-                className="hover: w-full rounded bg-zinc-50 px-2 py-2 transition-colors hover:bg-primary hover:text-surface"
+                className="w-full rounded bg-zinc-50 transition-colors hover:bg-primary hover:text-surface"
               >
                 <InternalIconLink
-                  href={item.question} // TODO - FIX SLUG
+                  href={`/faq/${item.slug}`}
                   text={item.question}
                   startIcon={FaFileAlt}
+                  className="px-2 py-2"
                 />
               </li>
             );

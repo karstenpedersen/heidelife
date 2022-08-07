@@ -6,9 +6,9 @@ export interface IHeroSection {}
 
 const HeroSection: React.FC<IHeroSection> = () => {
   return (
-    <section id="hero" className="h-[400px] sm:h-[550px]">
+    <section id="hero" className="h-[450px] sm:h-[550px]">
       <div className="flex h-full flex-col items-center justify-center">
-        <div className="relative flex h-[250px] w-[250px] items-center justify-center transition-all sm:h-[350px] sm:w-[350px]">
+        <div className="flex h-[250px] w-[250px] items-center justify-center transition-all sm:h-[350px] sm:w-[350px]">
           <motion.div
             initial={{ width: "50%", height: "50%" }}
             animate={{ width: "100%", height: "100%" }}

@@ -3,13 +3,9 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           {/* Generel */}
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
           <meta
             name="no-email-collection"
             content="http://www.unspam.com/noemailcollection/"
@@ -19,6 +15,7 @@ class MyDocument extends Document {
           <meta name="target" content="all" />
           <meta name="HandheldFriendly" content="True" />
           <meta name="MobileOptimized" content="320" />
+          <meta name="theme-color" content="#18181b" />
 
           {/* Information */}
           <meta name="subject" content="Heidelife Minecarft Server" />
@@ -75,7 +72,7 @@ class MyDocument extends Document {
           <meta
             name="news_keywords"
             content="Minecraft, Server, Heidelife, Heidelife.dk, Dansk"
-          ></meta>
+          />
         </Head>
         <body className="min-h-screen">
           <Main />

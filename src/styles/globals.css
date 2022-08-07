@@ -16,7 +16,7 @@
 }
 
 body {
-  @apply min-h-screen bg-gradient-to-b from-secondary to-secondary-variant text-dark selection:bg-secondary selection:text-surface;
+  @apply bg-gradient-to-b from-secondary to-secondary-variant text-dark selection:bg-secondary selection:text-surface;
 }
 
 /* Titles */

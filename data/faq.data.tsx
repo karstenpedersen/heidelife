@@ -8,69 +8,33 @@ export const faqData: FaqContainer[] = [
       {
         question: "Hvordan joiner man jeres Discord?",
         answer: "Discord invite link",
-      },
-      {
-        question: "Hvordan joiner man jeres Discord?",
-        answer: "Discord invite link",
-      },
-      {
-        question: "Hvordan joiner man jeres Discord?",
-        answer: "Discord invite link",
-      },
-      {
-        question: "Hvordan joiner man jeres Discord?",
-        answer: "Discord invite link",
+        slug: "hvordan-joiner-man-jeres-discord",
       },
     ],
   },
   {
     title: "Problemer",
     iconTitle: "FaQuestionCircle",
-    faqs: [
-      {
-        question: "Hvordan joiner man jeres Discord?",
-        answer: "Discord invite link",
-      },
-    ],
+    faqs: [],
   },
   {
     title: "Regler",
     iconTitle: "FaRuler",
-    faqs: [
-      {
-        question: "Hvordan joiner man jeres Discord?",
-        answer: "Discord invite link",
-      },
-    ],
+    faqs: [],
   },
   {
     title: "Heidelife Butik",
     iconTitle: "FaShoppingCart",
-    faqs: [
-      {
-        question: "Hvordan joiner man jeres Discord?",
-        answer: "Discord invite link",
-      },
-    ],
+    faqs: [],
   },
   {
     title: "Tekniske problemer",
     iconTitle: "FaCog",
-    faqs: [
-      {
-        question: "Hvordan joiner man jeres Discord?",
-        answer: "Discord invite link",
-      },
-    ],
+    faqs: [],
   },
   {
     title: "Mere",
     iconTitle: "FaStar",
-    faqs: [
-      {
-        question: "Hvordan joiner man jeres Discord?",
-        answer: "Discord invite link",
-      },
-    ],
+    faqs: [],
   },
 ];
