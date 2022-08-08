@@ -6,8 +6,8 @@ import {
   FaPlay,
   FaShoppingCart,
 } from "react-icons/fa";
-import Heading from "../headings/Heading";
 import IconLink from "../utils/IconLink";
+import IconText from "../utils/IconText";
 import Wrapper from "../utils/Wrapper";
 import Navigation from "./Navigation";
 
@@ -19,10 +19,10 @@ const Footer: React.FC<IFooter> = () => {
       <Wrapper className="space-y-14">
         <div className="grid gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
           <div>
-            <Heading
-              title="Om os"
+            <IconText
+              text="Om os"
               startIcon={FaPlay}
-              headingType="h6"
+              textClassName="text-lg font-semibold"
               iconClassName="text-zinc-500"
             />
             <p>
@@ -32,11 +32,11 @@ const Footer: React.FC<IFooter> = () => {
             </p>
           </div>
           <div>
-            <Heading
-              title="Navigation"
+            <IconText
+              text="Navigation"
               startIcon={FaInfoCircle}
-              headingType="h6"
-              iconClassName="text-zinc-500"
+              textClassName="text-lg font-semibold"
+              iconClassName="text-zinc-500 text-xl"
             />
             <Navigation
               className="flex flex-col gap-2"
@@ -44,11 +44,11 @@ const Footer: React.FC<IFooter> = () => {
             />
           </div>
           <div>
-            <Heading
-              title="Discord"
+            <IconText
+              text="Heidelife Discord"
               startIcon={FaDiscord}
-              headingType="h6"
-              iconClassName="text-zinc-500"
+              textClassName="text-lg font-semibold"
+              iconClassName="text-zinc-500 text-xl"
             />
             <p className="mb-4">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
@@ -63,12 +63,13 @@ const Footer: React.FC<IFooter> = () => {
             />
           </div>
           <div>
-            <Heading
-              title="Heidelife Webshop"
+            <IconText
+              text="Heidelife Butik"
               startIcon={FaShoppingCart}
-              headingType="h6"
-              iconClassName="text-zinc-500"
+              textClassName="text-lg font-semibold"
+              iconClassName="text-zinc-500 text-xl"
             />
+
             <p className="mb-4">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
               nemo.
