@@ -1,6 +1,6 @@
-import { Faq } from "./faq";
-
 export type FaqContainer = {
+  id: number;
+  category: string;
   title: string;
   iconTitle:
     | "FaDiscord"
@@ -9,5 +9,6 @@ export type FaqContainer = {
     | "FaRuler"
     | "FaQuestionCircle"
     | "FaShoppingCart";
-  faqs: Faq[];
 };
+
+export type FaqCategory = { faqContainer: FaqContainer; faqs: Faq[] };

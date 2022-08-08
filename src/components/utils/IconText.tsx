@@ -19,7 +19,7 @@ const IconText: React.FC<IIconText> = ({
   iconClassName,
 }) => {
   return (
-    <div className={`flex min-w-max items-center gap-2 ${className}`}>
+    <div className={`flex  items-center gap-2 ${className}`}>
       {startIcon &&
         createElement(startIcon, {
           className: `text-lg mb-auto mt-1 ${iconClassName}`,

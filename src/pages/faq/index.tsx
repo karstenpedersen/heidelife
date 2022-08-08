@@ -1,17 +1,18 @@
 import Head from "next/head";
-import { FaExternalLinkAlt, FaSearch } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { allFaqs } from "../../../.contentlayer/generated/";
+import { faqContainerData } from "../../../data/faq.data";
 import FaqContainer from "../../components/container/FaqContainer";
 import PageLayout from "../../components/layouts/PageLayout";
 import IconLink from "../../components/utils/IconLink";
 import ImageBackground from "../../components/utils/ImageBackground";
 import Wrapper from "../../components/utils/Wrapper";
-import { getAllFaqContainers } from "../../lib/faqs";
 import TitleSection from "../../sections/TitleSection";
-import { FaqContainer as FaqContainerType } from "../../utils/types/faq-container";
+import { FaqCategory } from "../../utils/types/faq-container";
 import { NextPageWithLayout } from "../../utils/types/page";
 
-const FAQS: NextPageWithLayout<{ faqData: FaqContainerType[] }> = ({
-  faqData,
+const FAQS: NextPageWithLayout<{ faqCategories: FaqCategory[] }> = ({
+  faqCategories,
 }) => {
   return (
     <>
@@ -21,34 +22,17 @@ const FAQS: NextPageWithLayout<{ faqData: FaqContainerType[] }> = ({
         <meta name="og:description" content="FAQ - Ofte stillet spørgsmål" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <TitleSection>
-        <p className="text-center text-2xl font-bold text-white sm:text-4xl">
-          Hvordan kan vi hjælpe dig?
-        </p>
-        <form
-          action="submit"
-          className="relative mx-auto w-full max-w-lg overflow-hidden rounded-md bg-surface sm:w-[80%]"
-        >
-          <input
-            type="text"
-            className="w-full py-4 pl-5 pr-10 text-lg outline-none placeholder:text-gray"
-            placeholder="Søg..."
-          />
-          <button type="submit">
-            <FaSearch className="absolute right-5 top-[50%] min-w-max translate-y-[-50%] text-gray" />
-          </button>
-        </form>
-      </TitleSection>
+      <TitleSection title="Ofte stillede spørgsmål" />
       <section id="faq" className="bg-background py-10 sm:py-14">
         <Wrapper>
           <div className="grid gap-10 md:grid-cols-2">
-            {faqData.map((faqContainer, index) => {
+            {faqCategories.map((faqCategory, index) => {
               return (
                 <FaqContainer
                   key={index}
-                  title={faqContainer.title}
-                  iconTitle={faqContainer.iconTitle}
-                  items={faqContainer.faqs}
+                  title={faqCategory.faqContainer.title}
+                  iconTitle={faqCategory.faqContainer.iconTitle}
+                  items={faqCategory.faqs}
                 />
               );
             })}
@@ -87,11 +71,30 @@ FAQS.getLayout = (page) => {
 };
 
 export async function getStaticProps() {
-  const faqData = await getAllFaqContainers();
+  let faqCategories: FaqCategory[] = [];
+
+  faqContainerData.map((faqContainer, i) => {
+    faqCategories[i] = { faqContainer, faqs: [] };
+  });
+
+  allFaqs.map((faq, i) => {
+    const faqContainer = faqContainerData.find(({ category }) => {
+      return category === faq.category;
+    });
+
+    if (faqContainer) {
+      let faqCategory = faqCategories[faqContainer.id];
+
+      if (faqCategory) {
+        faqCategory.faqs.push(faq);
+        faqCategories[faqContainer.id] = faqCategory;
+      }
+    }
+  });
 
   return {
     props: {
-      faqData,
+      faqCategories,
     },
   };
 }

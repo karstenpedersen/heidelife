@@ -1,40 +1,40 @@
 import { FaqContainer } from "../src/utils/types/faq-container";
 
-export const faqData: FaqContainer[] = [
+export const faqContainerData: FaqContainer[] = [
   {
+    id: 0,
+    category: "server-and-discord",
     title: "Server og Discord",
     iconTitle: "FaDiscord",
-    faqs: [
-      {
-        question: "Hvordan joiner man jeres Discord?",
-        answer: "Discord invite link",
-        slug: "hvordan-joiner-man-jeres-discord",
-      },
-    ],
   },
   {
+    id: 1,
+    category: "problems",
     title: "Problemer",
     iconTitle: "FaQuestionCircle",
-    faqs: [],
   },
   {
+    id: 2,
+    category: "rules",
     title: "Regler",
     iconTitle: "FaRuler",
-    faqs: [],
   },
   {
+    id: 3,
+    category: "webshop",
     title: "Heidelife Butik",
     iconTitle: "FaShoppingCart",
-    faqs: [],
   },
   {
+    id: 4,
+    category: "technical-problems",
     title: "Tekniske problemer",
     iconTitle: "FaCog",
-    faqs: [],
   },
   {
+    id: 5,
+    category: "more",
     title: "Mere",
     iconTitle: "FaStar",
-    faqs: [],
   },
 ];

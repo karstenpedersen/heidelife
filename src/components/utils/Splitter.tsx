@@ -3,10 +3,10 @@ import { ReactNode } from "react";
 type BreakPoints = "sm" | "md" | "lg" | "xl" | "2xl";
 
 const containerClasses = {
-  sm: "sm:grid sm:grid-cols-2 sm:gap-10",
-  md: "md:grid md:grid-cols-2 md:gap-10",
-  lg: "lg:grid lg:grid-cols-2 lg:gap-10",
-  xl: "xl:grid xl:grid-cols-2 xl:gap-10",
+  sm: "sm:grid sm:grid-cols-10 sm:gap-10",
+  md: "md:grid md:grid-cols-10 md:gap-10",
+  lg: "lg:grid lg:grid-cols-10 lg:gap-10",
+  xl: "xl:grid xl:grid-cols-10 xl:gap-10",
   "2xl": "2xl:grid 2xl:grid-cols-2 2xl:gap-10",
 };
 
@@ -45,9 +45,11 @@ const Splitter: React.FC<ISplitter> = ({
         reverseBeforeBreak ? "flex-col-reverse" : "flex-col"
       } ${containerClasses[breakPoint]} ${className ?? className}`}
     >
-      <div className={`${leftClassName ?? leftClassName}`}>{leftChildren}</div>
+      <div className={`col-span-5 ${leftClassName ?? leftClassName}`}>
+        {leftChildren}
+      </div>
       <div
-        className={`${rightClassName ?? rightClassName} ${
+        className={`col-span-5 ${rightClassName ?? rightClassName} ${
           reverseAfterBreak && rightClasses[breakPoint]
         }`}
       >
