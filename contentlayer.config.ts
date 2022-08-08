@@ -8,6 +8,7 @@ export const FaqData = defineDocumentType(() => ({
   fields: {
     category: { type: "string", required: true },
     question: { type: "string", required: true },
+    description: { type: "string", required: true },
   },
   computedFields: {
     slug: {

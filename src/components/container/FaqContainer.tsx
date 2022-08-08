@@ -1,3 +1,4 @@
+import { Faq } from "contentlayer/generated";
 import { createElement } from "react";
 import {
   FaCog,
@@ -8,7 +9,6 @@ import {
   FaShoppingCart,
   FaStar,
 } from "react-icons/fa";
-import { Faq } from "../../utils/types/faq";
 import InternalIconLink from "../utils/InternalIconLink";
 
 export interface IFaqContainer {
@@ -50,7 +50,7 @@ const FaqContainer: React.FC<IFaqContainer> = ({ title, items, iconTitle }) => {
                 className="w-full rounded bg-zinc-50 transition-colors hover:bg-primary hover:text-surface"
               >
                 <InternalIconLink
-                  href={`/faq/${item.slug}`}
+                  href={`/faq/${item.category}/${item.slug}`}
                   text={item.question}
                   startIcon={FaFileAlt}
                   className="px-2 py-2"
