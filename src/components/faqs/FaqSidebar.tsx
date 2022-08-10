@@ -18,15 +18,15 @@ const FaqSidebar: React.FC<IFaqSidebar> = ({
   currentCategory,
 }) => {
   return (
-    <div className="sticky top-10 hidden max-w-[200px] lg:block">
-      <ul className="flex flex-col gap-3">
+    <div className="hidden max-w-[200px] lg:block">
+      <ul className="sticky top-[120px] flex flex-col gap-3">
         {allFaqContainers.map((faqContainer, index) => {
           return (
             <li key={index}>
               {/* FAQ Category */}
               <Link href={`/faq/${faqContainer.category}/`}>
                 <a
-                  className={`font-semibold transition-colors hover:text-primary`}
+                  className={`font-semibold transition-colors hover:text-secondary`}
                 >
                   {faqContainer.title}
                 </a>
@@ -34,20 +34,20 @@ const FaqSidebar: React.FC<IFaqSidebar> = ({
 
               {/* Category FAQS */}
               {faqContainer.category === currentCategory && (
-                <ul className="ml-[2px] flex flex-col gap-1 border-l-[3px] border-dotted border-zinc-300 pt-1">
+                <ul className="ml-[2px] mt-1 flex flex-col gap-1 border-l-[2px] border-zinc-300">
                   {categoryFaqs?.map((faq) => {
                     return (
                       <li
                         key={index}
-                        className={`ml-3 ${
+                        className={`relative ml-[12px]  ${
                           currentFaq?.slug === faq.slug &&
-                          "border-l-[3px] border-secondary pl-2"
+                          "before:absolute before:left-[-15px] before:block before:h-full before:w-[4px] before:rounded-full before:bg-secondary before:content-['']"
                         }`}
                       >
                         <Link href={`/faq/${faq.category}/${faq.slug}`}>
                           <a
                             className={`text-zinc-500 transition-colors hover:text-secondary ${
-                              currentFaq?.slug === faq.slug && "!text-zinc-700"
+                              currentFaq?.slug === faq.slug && "!text-secondary"
                             }`}
                           >
                             {faq.question}

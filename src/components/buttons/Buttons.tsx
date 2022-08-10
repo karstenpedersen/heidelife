@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 
 const classes = {
-  base: "block max-w-max focus:outline-none rounded transition ease-in-out duration-300 uppercase font-semibold focus:ring-2",
+  base: "block max-w-max focus:outline-none rounded transition-all ease-in-out duration-300 uppercase font-semibold focus:ring-2",
   disabled: "opacity-50 cursor-not-allowed",
   pill: "rounded-full",
   size: {

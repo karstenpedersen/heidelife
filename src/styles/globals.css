@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/*--color-primary: #22d3ee;
+--color-primary-variant: #67e8f9;
+--color-secondary: #f59e0b;
+--color-secondary-variant: #fbbf24;*/
 
 :root {
   --color-primary: #22d3ee;
