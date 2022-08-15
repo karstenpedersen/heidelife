@@ -1,12 +1,14 @@
 import Head from "next/head";
+import { ruleData } from "../../data/rules.data";
 import Heading from "../components/headings/Heading";
 import PageLayout from "../components/layouts/PageLayout";
 import Wrapper from "../components/utils/Wrapper";
 import PromotionSection from "../sections/PromotionSection";
 import TitleSection from "../sections/TitleSection";
 import { NextPageWithLayout } from "../utils/types/page";
+import { Rule } from "../utils/types/rules";
 
-const Rules: NextPageWithLayout = () => {
+const Rules: NextPageWithLayout<{ rules: Rule[] }> = ({ rules }) => {
   return (
     <>
       <Head>
@@ -17,15 +19,48 @@ const Rules: NextPageWithLayout = () => {
       </Head>
 
       <TitleSection title="Regler" />
+
       <section id="regler" className="bg-background py-10 sm:py-14">
-        <Wrapper>
-          <Heading title="Regler" />
+        <Wrapper className="relative flex flex-col gap-10 lg:flex-row">
+          {/* Content */}
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
+            <div>
+              <Heading title="Regler" />
+              <p>
+                Ved at spille på Heidelife accepterer du at overholde reglerne
+                nedenfor, samt konsekvensen af at bryde nogle af reglerne.
+                Reglerne kan til enhver tid ændres, og straffen kan variere alt
+                efter, hvor voldsom overtrædelsen er.
+              </p>
+            </div>
+            {rules.map((rule, index) => {
+              return (
+                <div key={index} className="rounded bg-surface p-8 shadow-md">
+                  <h2 className="mb-2 text-lg font-semibold">{rule.rule}</h2>
+                  <p>{rule.description}</p>
+                  {rule.note && (
+                    <p className="mt-4 text-zinc-500">Note: {rule.note}</p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </Wrapper>
       </section>
       <PromotionSection />
     </>
   );
 };
+
+export async function getStaticProps() {
+  const rules = ruleData;
+
+  return {
+    props: {
+      rules,
+    },
+  };
+}
 
 Rules.getLayout = (page) => {
   return (

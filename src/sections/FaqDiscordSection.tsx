@@ -16,7 +16,7 @@ const FaqDiscordSection: React.FC<IFaqDiscordSection> = () => {
               <p>Kontakt os på vores discord</p>
             </div>
             <IconLink
-              href="/"
+              href="https://discord.gg/NBppK3W76m"
               endIcon={FaExternalLinkAlt}
               text="Gå til Heidelife Discord"
               className="rounded bg-primary px-6 py-4 font-semibold text-surface hover:bg-primary-variant"

@@ -57,7 +57,7 @@ const Footer: React.FC<IFooter> = () => {
               href="https://discord.gg/NBppK3W76m"
               text="Join vores Discord"
               endIcon={FaExternalLinkAlt}
-              iconClassName="!text-lg"
+              iconClassName="!text-base"
               className="hover:text-primary"
             />
           </div>
@@ -77,7 +77,7 @@ const Footer: React.FC<IFooter> = () => {
               href="https://heidelife.tebex.io/"
               text="Gå til vores butik"
               endIcon={FaExternalLinkAlt}
-              iconClassName="!text-lg"
+              iconClassName="!text-base"
               className="hover:text-primary"
             />
           </div>
