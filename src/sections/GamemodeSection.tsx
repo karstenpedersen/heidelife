@@ -11,7 +11,7 @@ const GamemodeSection: React.FC<IGamemodeSection> = ({ gamemodes }) => {
   return (
     <section id="gamemodes" className="bg-background py-10 sm:py-14">
       <Wrapper>
-        <div className="space-y-4 md:space-y-16">
+        <div className="grid gap-14">
           {gamemodes.map((gamemode, index) => {
             return (
               <ImageSplitter
@@ -20,6 +20,9 @@ const GamemodeSection: React.FC<IGamemodeSection> = ({ gamemodes }) => {
                 imageAlt={`${gamemode.title} image`}
                 reverseAfterBreak={index % 2 != 0}
                 reverseBeforeBreak={false}
+                layout="responsive"
+                width={16}
+                height={9}
               >
                 <Heading title={gamemode.title} headingType="h2" />
                 <p className="max-w-lg">{gamemode.description}</p>

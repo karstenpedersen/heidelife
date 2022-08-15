@@ -9,6 +9,9 @@ export interface IIMageSplitter {
   className?: string;
   reverseAfterBreak?: boolean;
   reverseBeforeBreak?: boolean;
+  layout?: "fill" | "responsive";
+  width?: number;
+  height?: number;
 }
 
 const ImageSplitter: React.FC<IIMageSplitter> = ({
@@ -18,6 +21,9 @@ const ImageSplitter: React.FC<IIMageSplitter> = ({
   className,
   reverseAfterBreak,
   reverseBeforeBreak,
+  layout = "fill",
+  width,
+  height,
 }) => {
   return (
     <Splitter
@@ -27,13 +33,16 @@ const ImageSplitter: React.FC<IIMageSplitter> = ({
           src={imageSrc}
           alt={imageAlt}
           className="object-cover"
-          layout="fill"
+          layout={layout}
+          width={width}
+          height={height}
         />
       }
       leftClassName={className}
-      rightClassName="relative h-[300px]"
+      rightClassName="relative"
       reverseAfterBreak={reverseAfterBreak}
       reverseBeforeBreak={reverseBeforeBreak}
+      breakPoint="md"
     />
   );
 };

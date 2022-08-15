@@ -22,12 +22,12 @@ const IconText: React.FC<IIconText> = ({
     <div className={`flex items-center gap-2 transition-all ${className}`}>
       {startIcon &&
         createElement(startIcon, {
-          className: `text-lg mb-auto mt-1 ${iconClassName}`,
+          className: `text-lg ${iconClassName}`,
         })}
       {text && <p className={`${textClassName}`}>{text}</p>}
       {endIcon &&
         createElement(endIcon, {
-          className: `text-lg mt-1 ${iconClassName}`,
+          className: `text-lg  ${iconClassName}`,
         })}
     </div>
   );

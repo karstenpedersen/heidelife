@@ -8,7 +8,7 @@ export interface IFaqDiscordSection {}
 const FaqDiscordSection: React.FC<IFaqDiscordSection> = () => {
   return (
     <section id="discord" className="h-[400px]">
-      <ImageBackground imageSrc="/images/hero.jpg" darkBg>
+      <ImageBackground imageSrc="/images/backgrounds/discord.png" gradient>
         <Wrapper className="flex flex-col items-center justify-center">
           <div className="flex w-full flex-col items-center justify-between gap-8 rounded bg-surface p-8 shadow-md md:flex-row md:gap-10">
             <div className="text-center md:text-left">

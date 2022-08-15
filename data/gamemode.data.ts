@@ -2,18 +2,18 @@ import { Gamemode } from "../src/utils/types/gamemode";
 
 export const gamemodeData: Gamemode[] = [
   {
-    title: "PVP",
+    title: "Skyblock",
     description: "Beskrivelse",
-    imageSrc: "/images/hero.jpg",
+    imageSrc: "/images/games/skyblock-banner.png",
   },
   {
     title: "Prison",
     description: "Beskrivelse",
-    imageSrc: "/images/hero.jpg",
+    imageSrc: "/images/games/prison-banner.png",
   },
   {
-    title: "Creative",
+    title: "Survival",
     description: "Beskrivelse",
-    imageSrc: "/images/hero.jpg",
+    imageSrc: "/images/games/survival-banner.png",
   },
 ];

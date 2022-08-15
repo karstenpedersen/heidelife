@@ -6,6 +6,7 @@ export interface IImageBackground {
   imageSrc: string;
   className?: string;
   darkBg?: boolean;
+  gradient?: boolean;
 }
 
 const ImageBackground: React.FC<IImageBackground> = ({
@@ -13,6 +14,7 @@ const ImageBackground: React.FC<IImageBackground> = ({
   imageSrc,
   className,
   darkBg,
+  gradient = false,
 }) => {
   return (
     <div className="relative h-full w-full">
@@ -23,9 +25,13 @@ const ImageBackground: React.FC<IImageBackground> = ({
         layout="fill"
       />
 
+      {gradient && (
+        <div className="absolute h-full w-full bg-gradient-to-b from-secondary to-secondary-variant opacity-90" />
+      )}
+
       <div
         className={`absolute h-full w-full ${
-          darkBg && "bg-black bg-opacity-40"
+          darkBg && "bg-black bg-opacity-20"
         } ${className}`}
       >
         {children}

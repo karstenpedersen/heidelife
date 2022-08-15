@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   FaDiscord,
   FaExternalLinkAlt,
@@ -55,7 +54,7 @@ const Footer: React.FC<IFooter> = () => {
               nemo.
             </p>
             <IconLink
-              href="#"
+              href="https://discord.gg/NBppK3W76m"
               text="Join vores Discord"
               endIcon={FaExternalLinkAlt}
               iconClassName="!text-lg"
@@ -75,7 +74,7 @@ const Footer: React.FC<IFooter> = () => {
               nemo.
             </p>
             <IconLink
-              href="#"
+              href="https://heidelife.tebex.io/"
               text="Gå til vores butik"
               endIcon={FaExternalLinkAlt}
               iconClassName="!text-lg"
@@ -86,15 +85,6 @@ const Footer: React.FC<IFooter> = () => {
 
         <div className="flex flex-col items-start justify-between gap-3 text-zinc-500 sm:flex-row">
           <p>heidelife.dk &copy; 2022</p>
-          <div>
-            <Link href="/">
-              <a className="hover:underline">Servicevilkår</a>
-            </Link>
-            {" | "}
-            <Link href="/">
-              <a className="hover:underline">Fortrolighedspolitik</a>
-            </Link>
-          </div>
         </div>
       </Wrapper>
     </footer>

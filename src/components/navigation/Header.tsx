@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaDiscord, FaShoppingCart } from "react-icons/fa";
 import { HiMenuAlt3 } from "react-icons/hi";
 import IconLink from "../utils/IconLink";
 import Wrapper from "../utils/Wrapper";
@@ -63,16 +63,16 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
               <li className="list-none">
                 <IconLink
                   text="Butik"
-                  endIcon={FaExternalLinkAlt}
-                  href="#"
+                  startIcon={FaShoppingCart}
+                  href="https://heidelife.tebex.io/"
                   className="transition-colors hover:text-primary"
                 />
               </li>
               <li className="list-none">
                 <IconLink
                   text="Discord"
-                  endIcon={FaExternalLinkAlt}
-                  href="#"
+                  startIcon={FaDiscord}
+                  href="https://discord.gg/NBppK3W76m"
                   className="transition-colors hover:text-primary"
                 />
               </li>
