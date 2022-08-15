@@ -35,7 +35,10 @@ const Rules: NextPageWithLayout<{ rules: Rule[] }> = ({ rules }) => {
             </div>
             {rules.map((rule, index) => {
               return (
-                <div key={index} className="rounded bg-surface p-8 shadow-md">
+                <div
+                  key={index}
+                  className="rounded bg-surface p-4 shadow-md sm:p-8"
+                >
                   <h2 className="mb-2 text-lg font-semibold">{rule.rule}</h2>
                   <p>{rule.description}</p>
                   {rule.note && (

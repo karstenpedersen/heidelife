@@ -22,7 +22,7 @@ const TitleSection: React.FC<ITitleSection> = ({
           ) : (
             <div className="flex flex-col items-center justify-center gap-3">
               <h1
-                className={`text-center text-4xl font-bold uppercase text-surface sm:text-5xl ${className}`}
+                className={`text-center text-3xl font-bold uppercase text-surface sm:text-5xl ${className}`}
               >
                 {title}
               </h1>

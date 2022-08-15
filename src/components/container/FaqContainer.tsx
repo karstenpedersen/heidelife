@@ -34,7 +34,7 @@ const FaqContainer: React.FC<IFaqContainer> = ({ title, items, iconTitle }) => {
   };
 
   return (
-    <div className="flex gap-6 rounded bg-surface p-8 shadow-md">
+    <div className="flex gap-6 rounded bg-surface p-4 shadow-md sm:p-8">
       <div className="hidden sm:block md:hidden lg:block">
         {createElement(icons[iconTitle], {
           className: `text-4xl`,
