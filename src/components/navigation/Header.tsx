@@ -81,7 +81,7 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
 
           <Contacts
             className="hidden gap-5 text-2xl md:flex"
-            itemClassName="hover:text-primary transition-colors"
+            itemClassName="transition-colors"
           />
 
           <HiMenuAlt3

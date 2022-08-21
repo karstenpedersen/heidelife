@@ -24,10 +24,10 @@ export interface IHeroSection {}
 
 const HeroSection: React.FC<IHeroSection> = () => {
   return (
-    <section id="hero" className="h-[450px] sm:h-[550px]">
+    <section id="hero" className="h-screen">
       <ImageBackground imageSrc="/images/backgrounds/sky.png" darkBg>
         <div className="flex h-full flex-col items-center justify-center">
-          <div className="flex h-[250px] w-[250px] items-center justify-center transition-all sm:h-[350px] sm:w-[350px]">
+          <div className="flex h-[260px] w-[260px] items-center justify-center transition-all sm:h-[400px] sm:w-[400px] lg:h-[420px] lg:w-[420px]">
             <motion.div
               variants={scaleVariants}
               initial="small"
@@ -38,7 +38,7 @@ const HeroSection: React.FC<IHeroSection> = () => {
               className="relative"
             >
               <Image
-                src="/images/logos/logo.png"
+                src="/images/logos/logo-detailed.png"
                 alt="logo"
                 layout="fill"
                 priority

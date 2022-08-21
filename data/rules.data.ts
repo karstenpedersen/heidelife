@@ -102,7 +102,7 @@ export const ruleData: Rule[] = [
   },
   {
     rule: "Brug af ulovlige mods",
-    description: "At bruge mods i Minecraft, som fx. Wurst og Husuni",
+    description: "At bruge mods i Minecraft, som fx. Wurst og Huzuni",
     consequence: "7d ban",
   },
   {

@@ -22,12 +22,11 @@ const Footer: React.FC<IFooter> = () => {
               text="Om os"
               startIcon={FaPlay}
               textClassName="text-lg font-semibold"
-              iconClassName="text-zinc-500"
+              iconClassName="text-primary"
             />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
-              officiis expedita fuga nisi aperiam. Minus, suscipit? Culpa enim
-              nostrum sint.
+            <p className="text-zinc-400">
+              HeideLife er den oplagte mulighed for at spille med dine venner på
+              en server der har fællesskabet i fokus.
             </p>
           </div>
           <div>
@@ -35,7 +34,7 @@ const Footer: React.FC<IFooter> = () => {
               text="Navigation"
               startIcon={FaInfoCircle}
               textClassName="text-lg font-semibold"
-              iconClassName="text-zinc-500 text-xl"
+              iconClassName="text-primary text-xl"
             />
             <Navigation
               className="flex flex-col gap-2"
@@ -47,9 +46,9 @@ const Footer: React.FC<IFooter> = () => {
               text="Heidelife Discord"
               startIcon={FaDiscord}
               textClassName="text-lg font-semibold"
-              iconClassName="text-zinc-500 text-xl"
+              iconClassName="text-primary text-xl"
             />
-            <p className="mb-4">
+            <p className="mb-4 text-zinc-400">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
               nemo.
             </p>
@@ -66,10 +65,10 @@ const Footer: React.FC<IFooter> = () => {
               text="Heidelife Butik"
               startIcon={FaShoppingCart}
               textClassName="text-lg font-semibold"
-              iconClassName="text-zinc-500 text-xl"
+              iconClassName="text-primary text-xl"
             />
 
-            <p className="mb-4">
+            <p className="mb-4 text-zinc-400">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
               nemo.
             </p>
