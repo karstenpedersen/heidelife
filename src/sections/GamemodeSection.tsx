@@ -25,7 +25,7 @@ const GamemodeSection: React.FC<IGamemodeSection> = ({ gamemodes }) => {
                 height={9}
               >
                 <Heading title={gamemode.title} headingType="h2" />
-                <p className="max-w-lg">{gamemode.description}</p>
+                <p className="max-w-lg text-lg">{gamemode.description}</p>
               </ImageSplitter>
             );
           })}

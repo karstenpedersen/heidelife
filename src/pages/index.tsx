@@ -2,7 +2,6 @@ import Head from "next/head";
 import PageLayout from "../components/layouts/PageLayout";
 import AboutSection from "../sections/AboutSection";
 import HeroSection from "../sections/HeroSection";
-import NewsSection from "../sections/NewsSection";
 import PromotionSection from "../sections/PromotionSection";
 import { NextPageWithLayout } from "../utils/types/page";
 
@@ -17,7 +16,6 @@ const Home: NextPageWithLayout = () => {
       </Head>
       <HeroSection />
       <AboutSection />
-      <NewsSection />
       <PromotionSection />
     </>
   );

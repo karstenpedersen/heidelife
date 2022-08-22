@@ -22,7 +22,7 @@ const Footer: React.FC<IFooter> = () => {
               text="Om os"
               startIcon={FaPlay}
               textClassName="text-lg font-semibold"
-              iconClassName="text-primary"
+              iconClassName="text-zinc-400"
             />
             <p className="text-zinc-400">
               HeideLife er den oplagte mulighed for at spille med dine venner på
@@ -34,7 +34,7 @@ const Footer: React.FC<IFooter> = () => {
               text="Navigation"
               startIcon={FaInfoCircle}
               textClassName="text-lg font-semibold"
-              iconClassName="text-primary text-xl"
+              iconClassName="text-zinc-400 text-xl"
             />
             <Navigation
               className="flex flex-col gap-2"
@@ -46,11 +46,12 @@ const Footer: React.FC<IFooter> = () => {
               text="Heidelife Discord"
               startIcon={FaDiscord}
               textClassName="text-lg font-semibold"
-              iconClassName="text-primary text-xl"
+              iconClassName="text-zinc-400 text-xl"
             />
             <p className="mb-4 text-zinc-400">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
-              nemo.
+              På Discord kan du få hjælp, deltage i giveaways, følge med i
+              udviklingen af serveren og få beta-adgang til serverne før de
+              åbner.
             </p>
             <IconLink
               href="https://discord.gg/NBppK3W76m"
@@ -60,17 +61,17 @@ const Footer: React.FC<IFooter> = () => {
               className="hover:text-primary"
             />
           </div>
-          <div>
+          <div className="flex flex-col">
             <IconText
               text="Heidelife Butik"
               startIcon={FaShoppingCart}
               textClassName="text-lg font-semibold"
-              iconClassName="text-primary text-xl"
+              iconClassName="text-zinc-400 text-xl"
             />
 
-            <p className="mb-4 text-zinc-400">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
-              nemo.
+            <p className="mb-4 flex-grow text-zinc-400">
+              Her kan du støtte op om serveren ved at købe donater-ranks, keys
+              og mange andre ting.
             </p>
             <IconLink
               href="https://heidelife.tebex.io/"

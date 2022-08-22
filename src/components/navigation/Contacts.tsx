@@ -35,7 +35,7 @@ const Contacts: React.FC<IContacts> = ({ className, itemClassName }) => {
           rel="noreferrer"
           className={`${itemClassName ?? itemClassName}`}
         >
-          <div className="group relative ">
+          <div className="group relative">
             <FaTiktok className="absolute top-0 text-[#00eae3] transition-all group-hover:-translate-x-[1px] group-hover:-translate-y-[1px]" />
             <FaTiktok className="absolute top-0 text-[#f20049] transition-all group-hover:translate-x-[1px] group-hover:translate-y-[1px]" />
             <FaTiktok className="absolute top-0 transition-all group-hover:text-zinc-900" />
