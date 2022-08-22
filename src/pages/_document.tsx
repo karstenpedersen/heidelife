@@ -5,6 +5,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="shortcut icon" href="/images/favicon.ico" />
+
           {/* Generel */}
           <meta
             name="no-email-collection"
