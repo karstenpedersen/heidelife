@@ -23,14 +23,15 @@ class MyDocument extends Document {
             sizes="16x16"
             href="/favicon/favicon-16x16.png"
           />
-          <link rel="manifest" href="/favicon/site.webmanifest" />
+          <link rel="manifest" href="/manifest.json" />
           <link
             rel="mask-icon"
             href="/favicon/safari-pinned-tab.svg"
             color="#5bbad5"
           />
-          <meta name="msapplication-TileColor" content="#18181b" />
-
+          <meta name="msapplication-TileColor" content="#0f163a" />
+          <meta name="apple-mobile-web-app-status-bar" content="#0f163a" />
+          <link rel="apple-touch-icon" href="/logos/logo-96x96.png" />
           {/* Generel */}
           <meta
             name="no-email-collection"
@@ -41,7 +42,7 @@ class MyDocument extends Document {
           <meta name="target" content="all" />
           <meta name="HandheldFriendly" content="True" />
           <meta name="MobileOptimized" content="320" />
-          <meta name="theme-color" content="#18181b" />
+          <meta name="theme-color" content="#0f163a" />
 
           {/* Information */}
           <meta name="subject" content="Heidelife Minecarft Server" />
