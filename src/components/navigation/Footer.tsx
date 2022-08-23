@@ -14,7 +14,7 @@ export interface IFooter {}
 
 const Footer: React.FC<IFooter> = () => {
   return (
-    <footer className="bg-background py-10 text-white">
+    <footer className="bg-header py-10 text-white">
       <Wrapper className="space-y-14">
         <div className="grid gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
           <div>

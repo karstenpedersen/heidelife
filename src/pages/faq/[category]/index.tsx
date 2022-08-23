@@ -25,7 +25,7 @@ const FaqCategory: NextPageWithLayout<{
         <meta name="viewport" content="width=device-width, initial-scale=2.0" />
       </Head>
       <TitleSection title={faqContainer.title} />
-      <section id="faq" className="bg-light py-10 sm:py-14 lg:bg-background">
+      <section id="faq" className="bg-background py-10 sm:py-14">
         <Wrapper>
           <Wrapper className="relative flex gap-6">
             <FaqSidebar
@@ -36,7 +36,7 @@ const FaqCategory: NextPageWithLayout<{
             />
 
             {/* Content */}
-            <ul className="prose prose-zinc h-full w-full divide-y-2 divide-zinc-300 rounded-md bg-light lg:min-h-[400px] lg:!max-w-none lg:py-10 lg:px-16 lg:shadow-md">
+            <ul className="prose prose-invert h-full w-full divide-y-2 divide-zinc-300 rounded-md lg:min-h-[400px] lg:!max-w-none lg:bg-surface lg:py-10 lg:px-16 lg:shadow-md">
               {categoryFaqs.map((faq, index) => {
                 return (
                   <li key={index}>

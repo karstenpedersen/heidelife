@@ -46,7 +46,7 @@ const FaqSidebar: React.FC<IFaqSidebar> = ({
                       >
                         <Link href={`/faq/${faq.category}/${faq.slug}`}>
                           <a
-                            className={`text-zinc-500 transition-colors hover:text-accent ${
+                            className={`text-zinc-400 transition-colors hover:text-accent ${
                               currentFaq?.slug === faq.slug && "!text-accent"
                             }`}
                           >

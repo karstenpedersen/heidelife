@@ -9,11 +9,12 @@
   --color-dark: #18181b;
   --color-gray: #71717a;
   --color-light: #ffffff;
-  --color-blue-900: #00042c;
-  --color-blue-800: #213050;
+  --color-blue-900: #0f163a; /*00042c;*/
+  --color-blue-800: #172155;
+  --color-blue-700: #25316d;
 
-  --color-background: var(--color-blue-900);
-  --color-surface: var(--color-blue-800);
+  --color-background: var(--color-blue-800);
+  --color-surface: var(--color-blue-700);
 }
 
 body {

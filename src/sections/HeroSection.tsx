@@ -39,7 +39,7 @@ const HeroSection: React.FC<IHeroSection> = () => {
             >
               <Image
                 src="/images/logos/logo-detailed.png"
-                alt="logo"
+                alt=""
                 layout="fill"
                 priority
               />

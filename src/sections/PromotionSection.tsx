@@ -18,7 +18,7 @@ const PromotionSection: React.FC<IPromotionSection> = () => {
             className="!text-4xl text-light"
             decoration={false}
           />
-          <IpButton size="lg" variant="accent" />
+          <IpButton size="lg" variant="primary" />
         </Wrapper>
       </ImageBackground>
     </section>

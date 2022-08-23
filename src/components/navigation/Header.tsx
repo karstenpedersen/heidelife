@@ -38,7 +38,7 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
     <>
       <header className={`fixed top-0 left-0 z-50 h-[90px] w-full`}>
         <div
-          className={`absolute top-0 bottom-0 left-0 right-0 -z-10 bg-background text-white transition-opacity duration-200 ${
+          className={`absolute top-0 bottom-0 left-0 right-0 -z-10 bg-header text-white transition-opacity duration-200 ${
             showBg ? "opacity-100 shadow-md" : "opacity-0"
           }`}
         />

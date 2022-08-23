@@ -16,6 +16,7 @@ module.exports = {
         gray: "var(--color-gray)",
         background: "var(--color-background)",
         surface: "var(--color-surface)",
+        header: "var(--color-blue-900)",
       },
     },
   },
