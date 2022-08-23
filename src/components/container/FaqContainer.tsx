@@ -1,5 +1,5 @@
-import { Faq } from "contentlayer/generated";
-import { createElement } from "react";
+import { Faq } from 'contentlayer/generated';
+import { createElement } from 'react';
 import {
   FaCog,
   FaDiscord,
@@ -8,19 +8,19 @@ import {
   FaRuler,
   FaShoppingCart,
   FaStar,
-} from "react-icons/fa";
-import InternalIconLink from "../utils/InternalIconLink";
+} from 'react-icons/fa';
+import InternalIconLink from '../utils/InternalIconLink';
 
 export interface IFaqContainer {
   title: string;
   items: Faq[];
   iconTitle:
-    | "FaDiscord"
-    | "FaCog"
-    | "FaStar"
-    | "FaRuler"
-    | "FaQuestionCircle"
-    | "FaShoppingCart";
+    | 'FaDiscord'
+    | 'FaCog'
+    | 'FaStar'
+    | 'FaRuler'
+    | 'FaQuestionCircle'
+    | 'FaShoppingCart';
 }
 
 const FaqContainer: React.FC<IFaqContainer> = ({ title, items, iconTitle }) => {

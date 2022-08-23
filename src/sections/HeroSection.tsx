@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
-import ImageBackground from "../components/utils/ImageBackground";
-import IpButton from "../components/utils/IpButton";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import ImageBackground from '../components/utils/ImageBackground';
+import IpButton from '../components/utils/IpButton';
 
 const scaleVariants = {
-  small: { width: "50%", height: "50%" },
-  large: { width: "100%", height: "100%" },
+  small: { width: '50%', height: '50%' },
+  large: { width: '100%', height: '100%' },
 };
 
 const floatVariants = {

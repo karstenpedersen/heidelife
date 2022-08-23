@@ -1,5 +1,5 @@
-import { IconType } from "react-icons/lib";
-import IconText from "./IconText";
+import { IconType } from 'react-icons/lib';
+import IconText from './IconText';
 
 export interface IIconLink {
   href: string;
@@ -23,7 +23,7 @@ const IconLink: React.FC<IIconLink> = ({
   return (
     <a
       href={href}
-      target={"_blank"}
+      target={'_blank'}
       rel="noreferrer"
       className="group max-w-max"
     >

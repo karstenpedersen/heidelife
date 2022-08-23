@@ -1,15 +1,15 @@
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { FaDiscord, FaShoppingCart } from "react-icons/fa";
-import { HiMenuAlt3 } from "react-icons/hi";
-import IconLink from "../utils/IconLink";
-import Wrapper from "../utils/Wrapper";
-import Contacts from "./Contacts";
-import MobileNav from "./MobileNav";
-import Navigation from "./Navigation";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { FaDiscord, FaShoppingCart } from 'react-icons/fa';
+import { HiMenuAlt3 } from 'react-icons/hi';
+import IconLink from '../utils/IconLink';
+import Wrapper from '../utils/Wrapper';
+import Contacts from './Contacts';
+import MobileNav from './MobileNav';
+import Navigation from './Navigation';
 
-export interface IHeader extends React.ComponentPropsWithoutRef<"header"> {}
+export interface IHeader extends React.ComponentPropsWithoutRef<'header'> {}
 
 const Header: React.FC<IHeader> = ({ ..._ }) => {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
@@ -25,10 +25,10 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", (e) => handleScroll());
+    window.addEventListener('scroll', (e) => handleScroll());
 
     return () => {
-      window.removeEventListener("scroll", (e) => handleScroll());
+      window.removeEventListener('scroll', (e) => handleScroll());
     };
   }, []);
 
@@ -39,7 +39,7 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
       <header className={`fixed top-0 left-0 z-50 h-[90px] w-full`}>
         <div
           className={`absolute top-0 bottom-0 left-0 right-0 -z-10 bg-header text-white transition-opacity duration-200 ${
-            showBg ? "opacity-100 shadow-md" : "opacity-0"
+            showBg ? 'opacity-100 shadow-md' : 'opacity-0'
           }`}
         />
         <Wrapper className="flex items-center justify-between text-lg font-semibold">
@@ -58,7 +58,7 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
               <Navigation
                 className="flex gap-7"
                 itemClassName={` transition-colors ${
-                  showBg ? "hover:!text-accent" : "hover:!text-background"
+                  showBg ? 'hover:!text-accent' : 'hover:!text-background'
                 }`}
               />
               <li className="list-none">
@@ -67,7 +67,7 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
                   startIcon={FaShoppingCart}
                   href="https://heidelife.tebex.io/"
                   className={`transition-colors ${
-                    showBg ? "hover:!text-accent" : "hover:!text-background"
+                    showBg ? 'hover:!text-accent' : 'hover:!text-background'
                   }`}
                 />
               </li>
@@ -77,7 +77,7 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
                   startIcon={FaDiscord}
                   href="https://discord.gg/NBppK3W76m"
                   className={`transition-colors ${
-                    showBg ? "hover:!text-accent" : "hover:!text-background"
+                    showBg ? 'hover:!text-accent' : 'hover:!text-background'
                   }`}
                 />
               </li>

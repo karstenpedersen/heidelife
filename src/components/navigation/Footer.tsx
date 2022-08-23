@@ -4,11 +4,11 @@ import {
   FaInfoCircle,
   FaPlay,
   FaShoppingCart,
-} from "react-icons/fa";
-import IconLink from "../utils/IconLink";
-import IconText from "../utils/IconText";
-import Wrapper from "../utils/Wrapper";
-import Navigation from "./Navigation";
+} from 'react-icons/fa';
+import IconLink from '../utils/IconLink';
+import IconText from '../utils/IconText';
+import Wrapper from '../utils/Wrapper';
+import Navigation from './Navigation';
 
 export interface IFooter {}
 

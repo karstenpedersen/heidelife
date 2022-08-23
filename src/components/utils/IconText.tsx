@@ -1,5 +1,5 @@
-import { createElement } from "react";
-import { IconType } from "react-icons/lib";
+import { createElement } from 'react';
+import { IconType } from 'react-icons/lib';
 
 export interface IIconText {
   text?: string;
@@ -24,7 +24,7 @@ const IconText: React.FC<IIconText> = ({
     <div className={`flex items-center gap-2 transition-all ${className}`}>
       {startIcon &&
         createElement(startIcon, {
-          className: `text-lg ${stayInTop && "mb-auto mt-1"} ${iconClassName}`,
+          className: `text-lg ${stayInTop && 'mb-auto mt-1'} ${iconClassName}`,
         })}
       {text && <p className={`${textClassName}`}>{text}</p>}
       {endIcon &&

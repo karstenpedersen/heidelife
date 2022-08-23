@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { IconType } from "react-icons/lib";
-import IconText from "./IconText";
+import Link from 'next/link';
+import { IconType } from 'react-icons/lib';
+import IconText from './IconText';
 
 export interface IInternalIconLink {
   href: string;
@@ -10,7 +10,7 @@ export interface IInternalIconLink {
   className?: string;
   textClassName?: string;
   iconClassName?: string;
-  variant?: "primary" | "secondary";
+  variant?: 'primary' | 'secondary';
   stayInTop?: boolean;
 }
 

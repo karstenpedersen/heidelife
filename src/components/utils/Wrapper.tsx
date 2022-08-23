@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-export interface IWrapper extends React.ComponentPropsWithoutRef<"div"> {
+export interface IWrapper extends React.ComponentPropsWithoutRef<'div'> {
   children: ReactNode;
   className?: string;
   containerClassName?: string;

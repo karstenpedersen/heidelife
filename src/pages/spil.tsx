@@ -1,11 +1,11 @@
-import Head from "next/head";
-import { gamemodeData } from "../../data/gamemode.data";
-import PageLayout from "../components/layouts/PageLayout";
-import GamemodeSection from "../sections/GamemodeSection";
-import PromotionSection from "../sections/PromotionSection";
-import TitleSection from "../sections/TitleSection";
-import { Gamemode } from "../utils/types/gamemode";
-import { NextPageWithLayout } from "../utils/types/page";
+import Head from 'next/head';
+import { gamemodeData } from '../../data/gamemode.data';
+import PageLayout from '../components/layouts/PageLayout';
+import GamemodeSection from '../sections/GamemodeSection';
+import PromotionSection from '../sections/PromotionSection';
+import TitleSection from '../sections/TitleSection';
+import { Gamemode } from '../utils/types/gamemode';
+import { NextPageWithLayout } from '../utils/types/page';
 
 const Games: NextPageWithLayout<{ gamemodes: Gamemode[] }> = ({
   gamemodes,
@@ -30,11 +30,7 @@ const Games: NextPageWithLayout<{ gamemodes: Gamemode[] }> = ({
 };
 
 Games.getLayout = (page) => {
-  return (
-    <>
-      <PageLayout>{page}</PageLayout>
-    </>
-  );
+  return <PageLayout>{page}</PageLayout>;
 };
 
 export async function getStaticProps() {

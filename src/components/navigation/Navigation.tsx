@@ -1,4 +1,4 @@
-import NavLink from "./NavLink";
+import NavLink from './NavLink';
 
 export interface INavigation {
   className?: string;

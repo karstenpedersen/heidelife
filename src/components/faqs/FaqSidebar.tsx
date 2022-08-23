@@ -1,6 +1,6 @@
-import { Faq } from "contentlayer/generated";
-import Link from "next/link";
-import { FaqContainer } from "../../utils/types/faq-container";
+import { Faq } from 'contentlayer/generated';
+import Link from 'next/link';
+import { FaqContainer } from '../../utils/types/faq-container';
 
 export interface IFaqSidebar {
   allFaqContainers: FaqContainer[];
@@ -47,7 +47,7 @@ const FaqSidebar: React.FC<IFaqSidebar> = ({
                         <Link href={`/faq/${faq.category}/${faq.slug}`}>
                           <a
                             className={`text-zinc-400 transition-colors hover:text-accent ${
-                              currentFaq?.slug === faq.slug && "!text-accent"
+                              currentFaq?.slug === faq.slug && '!text-accent'
                             }`}
                           >
                             {faq.question}
@@ -67,7 +67,3 @@ const FaqSidebar: React.FC<IFaqSidebar> = ({
 };
 
 export default FaqSidebar;
-
-/*
-
-*/

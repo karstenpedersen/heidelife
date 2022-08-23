@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import Wrapper from "../components/utils/Wrapper";
+import { ReactNode } from 'react';
+import Wrapper from '../components/utils/Wrapper';
 
 export interface ITitleSection {
   title?: string;

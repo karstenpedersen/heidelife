@@ -1,13 +1,13 @@
-import Head from "next/head";
-import { allFaqs } from "../../../.contentlayer/generated/";
-import { faqContainerData } from "../../../data/faq.data";
-import FaqContainer from "../../components/container/FaqContainer";
-import PageLayout from "../../components/layouts/PageLayout";
-import Wrapper from "../../components/utils/Wrapper";
-import FaqDiscordSection from "../../sections/FaqDiscordSection";
-import TitleSection from "../../sections/TitleSection";
-import { FaqCategory } from "../../utils/types/faq-container";
-import { NextPageWithLayout } from "../../utils/types/page";
+import Head from 'next/head';
+import { allFaqs } from '../../../.contentlayer/generated/';
+import { faqContainerData } from '../../../data/faq.data';
+import FaqContainer from '../../components/container/FaqContainer';
+import PageLayout from '../../components/layouts/PageLayout';
+import Wrapper from '../../components/utils/Wrapper';
+import FaqDiscordSection from '../../sections/FaqDiscordSection';
+import TitleSection from '../../sections/TitleSection';
+import { FaqCategory } from '../../utils/types/faq-container';
+import { NextPageWithLayout } from '../../utils/types/page';
 
 const FAQS: NextPageWithLayout<{ faqCategories: FaqCategory[] }> = ({
   faqCategories,

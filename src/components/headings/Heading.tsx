@@ -1,24 +1,24 @@
-import { createElement } from "react";
-import { IconType } from "react-icons/lib";
+import { createElement } from 'react';
+import { IconType } from 'react-icons/lib';
 
-type HeadingType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+type HeadingType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 const headingClasses = {
-  h1: "title-1 mb-4",
-  h2: "title-2 mb-4",
-  h3: "title-3 mb-4",
-  h4: "title-4 mb-2",
-  h5: "title-5 mb-2",
-  h6: "title-6 mb-2 ",
+  h1: 'title-1 mb-4',
+  h2: 'title-2 mb-4',
+  h3: 'title-3 mb-4',
+  h4: 'title-4 mb-2',
+  h5: 'title-5 mb-2',
+  h6: 'title-6 mb-2 ',
 };
 
 const iconClasses = {
-  h1: "text-6xl",
-  h2: "text-5xl",
-  h3: "text-4xl",
-  h4: "text-3xl",
-  h5: "text-2xl",
-  h6: "text-xl",
+  h1: 'text-6xl',
+  h2: 'text-5xl',
+  h3: 'text-4xl',
+  h4: 'text-3xl',
+  h5: 'text-2xl',
+  h6: 'text-xl',
 };
 
 export interface IHeading {
@@ -36,7 +36,7 @@ const Heading: React.FC<IHeading> = ({
   title,
   startIcon,
   endIcon,
-  headingType = "h1",
+  headingType = 'h1',
   className,
   titleClassName,
   iconClassName,

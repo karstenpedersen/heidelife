@@ -1,40 +1,40 @@
-import { FaLink } from "react-icons/fa";
-import IconText from "./IconText";
+import { FaLink } from 'react-icons/fa';
+import IconText from './IconText';
 
 const classes = {
   size: {
     md: {
-      icon: "sm:!text-2xl !text-lg",
-      text: "sm:text-3xl text-xl",
+      icon: 'sm:!text-2xl !text-lg',
+      text: 'sm:text-3xl text-xl',
     },
     lg: {
-      icon: "sm:!text-3xl !text-lg",
-      text: "sm:text-4xl text-2xl",
+      icon: 'sm:!text-3xl !text-lg',
+      text: 'sm:text-4xl text-2xl',
     },
   },
   variant: {
-    primary: "text-light hover:bg-accent-variant bg-accent",
-    secondary: "text-background hover:bg-accent bg-light hover:text-light",
+    primary: 'text-light hover:bg-accent-variant bg-accent',
+    secondary: 'text-background hover:bg-accent bg-light hover:text-light',
   },
 };
 
-export interface IIpButton extends React.ComponentPropsWithoutRef<"button"> {
+export interface IIpButton extends React.ComponentPropsWithoutRef<'button'> {
   className?: string;
-  size?: "md" | "lg";
-  variant?: "primary" | "secondary";
+  size?: 'md' | 'lg';
+  variant?: 'primary' | 'secondary';
 }
 
 const IpButton: React.FC<IIpButton> = ({
   className,
-  size = "md",
-  variant = "primary",
+  size = 'md',
+  variant = 'primary',
   ..._
 }) => {
   return (
     <button
       className={`rounded transition-all ${className} ${classes.variant[variant]}`}
       onClick={() => {
-        navigator.clipboard.writeText("mc.heidelife.dk");
+        navigator.clipboard.writeText('mc.heidelife.dk');
       }}
     >
       <IconText

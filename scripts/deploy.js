@@ -1,12 +1,12 @@
-import dotenv from "dotenv";
-import FtpDeploy from "ftp-deploy";
+import dotenv from 'dotenv';
+import FtpDeploy from 'ftp-deploy';
 
-dotenv.config({ path: "./.env" });
+dotenv.config({ path: './.env' });
 
 async function main() {
   try {
     // Replace "/out" with your build directory which contains all generated static files
-    const outDir = path.join(process.cwd(), "/out");
+    const outDir = path.join(process.cwd(), '/out');
 
     await new FtpDeploy().deploy({
       user: process.env.FTP_USER, // Your credentials
@@ -15,19 +15,19 @@ async function main() {
       port: process.env.FTP_PORT, // Your credentials
 
       localRoot: outDir, // Location of build files in project
-      remoteRoot: "/", // Upload location on remote, replace with subfolder on FTP-server if required
+      remoteRoot: '/', // Upload location on remote, replace with subfolder on FTP-server if required
 
-      include: ["*", "**/*"], // Upload all files from build folder
+      include: ['*', '**/*'], // Upload all files from build folder
       exclude: [], // Exclude no files
 
       deleteRemote: false, // Set to true if you want to delete ALL FILES in the remote root before uploading
       forcePasv: true, // Use passive mode
     });
 
-    console.log("Succesfully deployed site");
+    console.log('Succesfully deployed site');
     return 0;
   } catch (e) {
-    console.error("An error occured during deployment:", e);
+    console.error('An error occured during deployment:', e);
     return 1;
   }
 }

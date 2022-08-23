@@ -1,7 +1,7 @@
-import Heading from "../components/headings/Heading";
-import ImageSplitter from "../components/utils/ImageSplitter";
-import Wrapper from "../components/utils/Wrapper";
-import { Gamemode } from "../utils/types/gamemode";
+import Heading from '../components/headings/Heading';
+import ImageSplitter from '../components/utils/ImageSplitter';
+import Wrapper from '../components/utils/Wrapper';
+import { Gamemode } from '../utils/types/gamemode';
 
 export interface IGamemodeSection {
   gamemodes: Gamemode[];

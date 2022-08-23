@@ -1,15 +1,15 @@
-import Head from "next/head";
-import Link from "next/link.js";
-import { allFaqs } from "../../../../.contentlayer/generated/index.mjs";
-import { Faq } from "../../../../.contentlayer/generated/types.js";
-import FaqSidebar from "../../../components/faqs/FaqSidebar";
-import PageLayout from "../../../components/layouts/PageLayout";
-import Wrapper from "../../../components/utils/Wrapper";
-import { getAllFaqContainers } from "../../../lib/faqs";
-import FaqDiscordSection from "../../../sections/FaqDiscordSection";
-import TitleSection from "../../../sections/TitleSection";
-import { FaqContainer } from "../../../utils/types/faq-container";
-import { NextPageWithLayout } from "../../../utils/types/page";
+import Head from 'next/head';
+import Link from 'next/link.js';
+import { allFaqs } from '../../../../.contentlayer/generated/index.mjs';
+import { Faq } from '../../../../.contentlayer/generated/types.js';
+import FaqSidebar from '../../../components/faqs/FaqSidebar';
+import PageLayout from '../../../components/layouts/PageLayout';
+import Wrapper from '../../../components/utils/Wrapper';
+import { getAllFaqContainers } from '../../../lib/faqs';
+import FaqDiscordSection from '../../../sections/FaqDiscordSection';
+import TitleSection from '../../../sections/TitleSection';
+import { FaqContainer } from '../../../utils/types/faq-container';
+import { NextPageWithLayout } from '../../../utils/types/page';
 
 const FaqCategory: NextPageWithLayout<{
   faqContainer: FaqContainer;
@@ -62,11 +62,7 @@ const FaqCategory: NextPageWithLayout<{
 };
 
 FaqCategory.getLayout = (page) => {
-  return (
-    <>
-      <PageLayout>{page}</PageLayout>
-    </>
-  );
+  return <PageLayout>{page}</PageLayout>;
 };
 
 export async function getStaticPaths() {

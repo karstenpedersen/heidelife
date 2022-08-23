@@ -1,7 +1,7 @@
-import { FaExternalLinkAlt } from "react-icons/fa";
-import IconLink from "../components/utils/IconLink";
-import ImageBackground from "../components/utils/ImageBackground";
-import Wrapper from "../components/utils/Wrapper";
+import { FaExternalLinkAlt } from 'react-icons/fa';
+import IconLink from '../components/utils/IconLink';
+import ImageBackground from '../components/utils/ImageBackground';
+import Wrapper from '../components/utils/Wrapper';
 
 export interface IFaqDiscordSection {}
 

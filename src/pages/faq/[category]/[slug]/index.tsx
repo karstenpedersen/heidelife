@@ -1,15 +1,15 @@
-import { useMDXComponent } from "next-contentlayer/hooks";
-import Head from "next/head";
-import { allFaqs } from "../../../../../.contentlayer/generated";
-import type { Faq } from "../../../../../.contentlayer/generated/types";
-import FaqSidebar from "../../../../components/faqs/FaqSidebar";
-import PageLayout from "../../../../components/layouts/PageLayout";
-import Wrapper from "../../../../components/utils/Wrapper";
-import { getAllFaqContainers } from "../../../../lib/faqs";
-import FaqDiscordSection from "../../../../sections/FaqDiscordSection";
-import TitleSection from "../../../../sections/TitleSection";
-import { FaqContainer } from "../../../../utils/types/faq-container";
-import { NextPageWithLayout } from "../../../../utils/types/page";
+import { useMDXComponent } from 'next-contentlayer/hooks';
+import Head from 'next/head';
+import { allFaqs } from '../../../../../.contentlayer/generated';
+import type { Faq } from '../../../../../.contentlayer/generated/types';
+import FaqSidebar from '../../../../components/faqs/FaqSidebar';
+import PageLayout from '../../../../components/layouts/PageLayout';
+import Wrapper from '../../../../components/utils/Wrapper';
+import { getAllFaqContainers } from '../../../../lib/faqs';
+import FaqDiscordSection from '../../../../sections/FaqDiscordSection';
+import TitleSection from '../../../../sections/TitleSection';
+import { FaqContainer } from '../../../../utils/types/faq-container';
+import { NextPageWithLayout } from '../../../../utils/types/page';
 
 const FAQ: NextPageWithLayout<{
   faq: Faq;
@@ -59,11 +59,7 @@ const FAQ: NextPageWithLayout<{
 };
 
 FAQ.getLayout = (page) => {
-  return (
-    <>
-      <PageLayout>{page}</PageLayout>
-    </>
-  );
+  return <PageLayout>{page}</PageLayout>;
 };
 
 export async function getStaticPaths() {

@@ -1,4 +1,4 @@
-import { faqContainerData } from "../../data/faq.data";
+import { faqContainerData } from '../../data/faq.data';
 
 export const getAllFaqContainers = () => {
   return faqContainerData;

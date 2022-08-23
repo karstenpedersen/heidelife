@@ -1,7 +1,7 @@
-import Heading from "../components/headings/Heading";
-import ImageBackground from "../components/utils/ImageBackground";
-import IpButton from "../components/utils/IpButton";
-import Wrapper from "../components/utils/Wrapper";
+import Heading from '../components/headings/Heading';
+import ImageBackground from '../components/utils/ImageBackground';
+import IpButton from '../components/utils/IpButton';
+import Wrapper from '../components/utils/Wrapper';
 
 export interface IPromotionSection {}
 

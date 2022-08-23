@@ -1,9 +1,9 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { FaDiscord, FaShoppingCart, FaTimes } from "react-icons/fa";
-import Backdrop from "../utils/Backdrop";
-import IconLink from "../utils/IconLink";
-import Contacts from "./Contacts";
-import Navigation from "./Navigation";
+import { AnimatePresence, motion } from 'framer-motion';
+import { FaDiscord, FaShoppingCart, FaTimes } from 'react-icons/fa';
+import Backdrop from '../utils/Backdrop';
+import IconLink from '../utils/IconLink';
+import Contacts from './Contacts';
+import Navigation from './Navigation';
 
 export interface IMobileNav {
   display: boolean;
@@ -18,10 +18,10 @@ const MobileNav: React.FC<IMobileNav> = ({ display, toggleMobileNav }) => {
           <Backdrop onClick={toggleMobileNav} />
 
           <motion.div
-            initial={{ x: "100vw" }}
+            initial={{ x: '100vw' }}
             animate={{ x: 0 }}
-            exit={{ x: "100vw" }}
-            transition={{ type: "tween" }}
+            exit={{ x: '100vw' }}
+            transition={{ type: 'tween' }}
             className={`fixed top-0 right-0 z-50 flex h-full w-full flex-col gap-2 bg-background px-[5vw] shadow-lg sm:w-4/5`}
           >
             <div className="flex h-[90px] items-center">

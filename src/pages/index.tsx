@@ -1,9 +1,9 @@
-import Head from "next/head";
-import PageLayout from "../components/layouts/PageLayout";
-import AboutSection from "../sections/AboutSection";
-import HeroSection from "../sections/HeroSection";
-import PromotionSection from "../sections/PromotionSection";
-import { NextPageWithLayout } from "../utils/types/page";
+import Head from 'next/head';
+import PageLayout from '../components/layouts/PageLayout';
+import AboutSection from '../sections/AboutSection';
+import HeroSection from '../sections/HeroSection';
+import PromotionSection from '../sections/PromotionSection';
+import { NextPageWithLayout } from '../utils/types/page';
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -22,11 +22,7 @@ const Home: NextPageWithLayout = () => {
 };
 
 Home.getLayout = (page) => {
-  return (
-    <>
-      <PageLayout>{page}</PageLayout>
-    </>
-  );
+  return <PageLayout>{page}</PageLayout>;
 };
 
 export default Home;

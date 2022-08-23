@@ -1,12 +1,12 @@
-import Head from "next/head";
-import { ruleData } from "../../data/rules.data";
-import Heading from "../components/headings/Heading";
-import PageLayout from "../components/layouts/PageLayout";
-import Wrapper from "../components/utils/Wrapper";
-import PromotionSection from "../sections/PromotionSection";
-import TitleSection from "../sections/TitleSection";
-import { NextPageWithLayout } from "../utils/types/page";
-import { Rule } from "../utils/types/rules";
+import Head from 'next/head';
+import { ruleData } from '../../data/rules.data';
+import Heading from '../components/headings/Heading';
+import PageLayout from '../components/layouts/PageLayout';
+import Wrapper from '../components/utils/Wrapper';
+import PromotionSection from '../sections/PromotionSection';
+import TitleSection from '../sections/TitleSection';
+import { NextPageWithLayout } from '../utils/types/page';
+import { Rule } from '../utils/types/rules';
 
 const Rules: NextPageWithLayout<{ rules: Rule[] }> = ({ rules }) => {
   return (
@@ -33,6 +33,8 @@ const Rules: NextPageWithLayout<{ rules: Rule[] }> = ({ rules }) => {
                 efter, hvor voldsom overtrædelsen er.
               </p>
             </div>
+
+            {/* Rules */}
             {rules.map((rule, index) => {
               return (
                 <div
@@ -70,11 +72,7 @@ export async function getStaticProps() {
 }
 
 Rules.getLayout = (page) => {
-  return (
-    <>
-      <PageLayout>{page}</PageLayout>
-    </>
-  );
+  return <PageLayout>{page}</PageLayout>;
 };
 
 export default Rules;

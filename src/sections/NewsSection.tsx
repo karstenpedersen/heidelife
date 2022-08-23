@@ -1,5 +1,5 @@
-import Heading from "../components/headings/Heading";
-import Wrapper from "../components/utils/Wrapper";
+import Heading from '../components/headings/Heading';
+import Wrapper from '../components/utils/Wrapper';
 
 export interface INewsSection {}
 

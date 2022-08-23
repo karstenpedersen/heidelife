@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { ReactNode } from "react";
+import Image from 'next/image';
+import { ReactNode } from 'react';
 
 export interface IImageBackground {
   children: ReactNode;
@@ -31,7 +31,7 @@ const ImageBackground: React.FC<IImageBackground> = ({
 
       <div
         className={`absolute h-full w-full ${
-          darkBg && "bg-black bg-opacity-20"
+          darkBg && 'bg-black bg-opacity-20'
         } ${className}`}
       >
         {children}

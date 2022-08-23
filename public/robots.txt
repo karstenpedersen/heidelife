@@ -1,0 +1,3 @@
+Sitemap: https://heidelife-dk.vercel.app/sitemap.xml
+User-agent: *
+Disallow: 

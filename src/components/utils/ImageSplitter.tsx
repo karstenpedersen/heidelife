@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { ReactNode } from "react";
-import Splitter from "./Splitter";
+import Image from 'next/image';
+import { ReactNode } from 'react';
+import Splitter from './Splitter';
 
 export interface IIMageSplitter {
   children: ReactNode;
@@ -9,7 +9,7 @@ export interface IIMageSplitter {
   className?: string;
   reverseAfterBreak?: boolean;
   reverseBeforeBreak?: boolean;
-  layout?: "fill" | "responsive";
+  layout?: 'fill' | 'responsive';
   width?: number;
   height?: number;
 }
@@ -21,7 +21,7 @@ const ImageSplitter: React.FC<IIMageSplitter> = ({
   className,
   reverseAfterBreak,
   reverseBeforeBreak,
-  layout = "fill",
+  layout = 'fill',
   width,
   height,
 }) => {

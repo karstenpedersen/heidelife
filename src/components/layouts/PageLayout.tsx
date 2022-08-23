@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-import Footer from "../navigation/Footer";
-import Header from "../navigation/Header";
+import { ReactNode } from 'react';
+import Footer from '../navigation/Footer';
+import Header from '../navigation/Header';
 
 export interface IPageLayout {
   children: ReactNode;

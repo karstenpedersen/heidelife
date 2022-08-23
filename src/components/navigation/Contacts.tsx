@@ -1,4 +1,4 @@
-import { FaTiktok, FaTwitch, FaYoutube } from "react-icons/fa";
+import { FaTiktok, FaTwitch, FaYoutube } from 'react-icons/fa';
 
 export interface IContacts {
   className?: string;
@@ -11,7 +11,7 @@ const Contacts: React.FC<IContacts> = ({ className, itemClassName }) => {
       <li>
         <a
           href="https://www.youtube.com/c/HeidemannDK"
-          target={"_blank"}
+          target={'_blank'}
           rel="noreferrer"
           className={`hover:!text-[#ff0000] ${itemClassName ?? itemClassName}`}
         >
@@ -21,7 +21,7 @@ const Contacts: React.FC<IContacts> = ({ className, itemClassName }) => {
       <li>
         <a
           href="https://www.twitch.tv/Heidemann"
-          target={"_blank"}
+          target={'_blank'}
           rel="noreferrer"
           className={`hover:text-[#8a43f2] ${itemClassName ?? itemClassName}`}
         >
@@ -31,7 +31,7 @@ const Contacts: React.FC<IContacts> = ({ className, itemClassName }) => {
       <li>
         <a
           href="https://www.tiktok.com/@heidelife.dk"
-          target={"_blank"}
+          target={'_blank'}
           rel="noreferrer"
           className={`${itemClassName ?? itemClassName}`}
         >
