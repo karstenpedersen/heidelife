@@ -26,7 +26,7 @@ const ImageBackground: React.FC<IImageBackground> = ({
       />
 
       {gradient && (
-        <div className="absolute h-full w-full bg-gradient-to-b from-secondary to-secondary-variant opacity-90" />
+        <div className="absolute h-full w-full bg-gradient-to-b from-accent to-accent-variant opacity-90" />
       )}
 
       <div

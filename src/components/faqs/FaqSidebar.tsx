@@ -26,7 +26,7 @@ const FaqSidebar: React.FC<IFaqSidebar> = ({
               {/* FAQ Category */}
               <Link href={`/faq/${faqContainer.category}/`}>
                 <a
-                  className={`font-semibold transition-colors hover:text-secondary`}
+                  className={`font-semibold transition-colors hover:text-accent`}
                 >
                   {faqContainer.title}
                 </a>
@@ -41,13 +41,13 @@ const FaqSidebar: React.FC<IFaqSidebar> = ({
                         key={index}
                         className={`relative ml-[12px]  ${
                           currentFaq?.slug === faq.slug &&
-                          "before:absolute before:left-[-15px] before:block before:h-full before:w-[4px] before:rounded-full before:bg-secondary before:content-['']"
+                          "before:absolute before:left-[-15px] before:block before:h-full before:w-[4px] before:rounded-full before:bg-accent before:content-['']"
                         }`}
                       >
                         <Link href={`/faq/${faq.category}/${faq.slug}`}>
                           <a
-                            className={`text-zinc-500 transition-colors hover:text-secondary ${
-                              currentFaq?.slug === faq.slug && "!text-secondary"
+                            className={`text-zinc-500 transition-colors hover:text-accent ${
+                              currentFaq?.slug === faq.slug && "!text-accent"
                             }`}
                           >
                             {faq.question}

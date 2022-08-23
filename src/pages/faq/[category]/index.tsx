@@ -41,8 +41,8 @@ const FaqCategory: NextPageWithLayout<{
                 return (
                   <li key={index}>
                     <Link href={`/faq/${faqContainer.category}/${faq.slug}`}>
-                      <a className="!no-underline hover:!text-secondary hover:!underline">
-                        <h2 className="!mb-0 !mt-2 transition-colors hover:!text-secondary">
+                      <a className="!no-underline hover:!text-accent hover:!underline">
+                        <h2 className="!mb-0 !mt-2 transition-colors hover:!text-accent">
                           {faq.question}
                         </h2>
                       </a>

@@ -36,11 +36,9 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 z-50 h-[90px] w-full  transition-all `}
-      >
+      <header className={`fixed top-0 left-0 z-50 h-[90px] w-full`}>
         <div
-          className={`absolute top-0 bottom-0 left-0 right-0 -z-10 bg-background text-white ${
+          className={`absolute top-0 bottom-0 left-0 right-0 -z-10 bg-background text-white transition-opacity duration-200 ${
             showBg ? "opacity-100 shadow-md" : "opacity-0"
           }`}
         />
@@ -59,14 +57,18 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
             <div className="hidden items-center gap-7 md:flex">
               <Navigation
                 className="flex gap-7"
-                itemClassName="hover:!text-secondary transition-colors"
+                itemClassName={` transition-colors ${
+                  showBg ? "hover:!text-accent" : "hover:!text-background"
+                }`}
               />
               <li className="list-none">
                 <IconLink
                   text="Butik"
                   startIcon={FaShoppingCart}
                   href="https://heidelife.tebex.io/"
-                  className="transition-colors hover:text-secondary"
+                  className={`transition-colors ${
+                    showBg ? "hover:!text-accent" : "hover:!text-background"
+                  }`}
                 />
               </li>
               <li className="list-none">
@@ -74,7 +76,9 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
                   text="Discord"
                   startIcon={FaDiscord}
                   href="https://discord.gg/NBppK3W76m"
-                  className="transition-colors hover:text-secondary"
+                  className={`transition-colors ${
+                    showBg ? "hover:!text-accent" : "hover:!text-background"
+                  }`}
                 />
               </li>
             </div>
@@ -86,7 +90,7 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
           />
 
           <HiMenuAlt3
-            className="text-[42px] transition-colors hover:text-secondary md:hidden"
+            className="text-[42px] transition-colors hover:text-accent md:hidden"
             role="button"
             onClick={toggleMobileNav}
           />

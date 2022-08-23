@@ -12,15 +12,15 @@ const classes = {
   },
   variant: {
     primary: {
-      contained: "bg-primary hover:bg-primary-variant text-surface focus",
+      contained: "bg-accent hover:bg-accent-variant text-surface focus",
       outlined:
-        "bg-transparent hover:bg-primary border-2 border-primary text-primary hover:text-surface",
-      text: "text-primary hover:text-primary-variant",
+        "bg-transparent hover:bg-accent border-2 border-accent text-accent hover:text-surface",
+      text: "text-accent hover:text-accent-variant",
     },
     secondary: {
-      contained: "bg-surface text-primary hover:text-primary-variant",
+      contained: "bg-surface text-accent hover:text-accent-variant",
       outlined:
-        "bg-transparent hover:bg-surface border-2 border-surface text-primary hover:text-primary-variant",
+        "bg-transparent hover:bg-surface border-2 border-surface text-accent hover:text-accent-variant",
       text: "text-surface hover:text-gray",
     },
     error: {

@@ -47,7 +47,7 @@ const FaqContainer: React.FC<IFaqContainer> = ({ title, items, iconTitle }) => {
             return (
               <li
                 key={index}
-                className="relative z-20 w-full text-light hover:text-secondary"
+                className="relative z-20 w-full text-light hover:text-accent"
               >
                 <InternalIconLink
                   href={`/faq/${item.category}/${item.slug}`}

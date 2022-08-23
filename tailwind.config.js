@@ -9,10 +9,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--color-primary)",
-        "primary-variant": "var(--color-primary-variant)",
-        secondary: "var(--color-secondary)",
-        "secondary-variant": "var(--color-secondary-variant)",
+        accent: "var(--color-accent)",
+        "accent-variant": "var(--color-accent-variant)",
         dark: "var(--color-dark)",
         light: "var(--color-light)",
         gray: "var(--color-gray)",

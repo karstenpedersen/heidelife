@@ -38,7 +38,7 @@ const Footer: React.FC<IFooter> = () => {
             />
             <Navigation
               className="flex flex-col gap-2"
-              itemClassName="hover:underline hover:!text-secondary transition-colors"
+              itemClassName="hover:underline hover:!text-accent transition-colors"
             />
           </div>
           <div>
@@ -58,7 +58,7 @@ const Footer: React.FC<IFooter> = () => {
               text="Join vores Discord"
               endIcon={FaExternalLinkAlt}
               iconClassName="!text-base"
-              className="hover:text-secondary"
+              className="hover:text-accent"
             />
           </div>
           <div className="flex flex-col">
@@ -77,7 +77,7 @@ const Footer: React.FC<IFooter> = () => {
               text="Gå til vores butik"
               endIcon={FaExternalLinkAlt}
               iconClassName="!text-base"
-              className="hover:text-secondary"
+              className="hover:text-accent"
             />
           </div>
         </div>

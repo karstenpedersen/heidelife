@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #5bc0de;
-  --color-primary-variant: #31b0d5;
-  --color-secondary: #ff7c3b;
-  --color-secondary-variant: #bd602c;
+  --color-accent: #ff7c3b;
+  --color-accent-variant: #bd602c;
 
   --color-dark: #18181b;
   --color-gray: #71717a;
   --color-light: #ffffff;
+  --color-blue-900: #00042c;
+  --color-blue-800: #213050;
 
-  --color-background: #00042c;
-  --color-surface: #213050;
+  --color-background: var(--color-blue-900);
+  --color-surface: var(--color-blue-800);
 }
 
 body {
-  @apply bg-gradient-to-b from-secondary to-secondary-variant text-light selection:bg-secondary selection:text-light;
+  @apply bg-background text-light selection:bg-accent selection:text-light;
 }
 
 /* Titles */

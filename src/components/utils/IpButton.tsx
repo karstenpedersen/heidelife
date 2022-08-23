@@ -13,8 +13,8 @@ const classes = {
     },
   },
   variant: {
-    primary: "text-light hover:bg-secondary-variant bg-secondary",
-    secondary: "text-background hover:bg-secondary bg-light hover:text-light",
+    primary: "text-light hover:bg-accent-variant bg-accent",
+    secondary: "text-background hover:bg-accent bg-light hover:text-light",
   },
 };
 

@@ -40,7 +40,7 @@ const Rules: NextPageWithLayout<{ rules: Rule[] }> = ({ rules }) => {
                   className="rounded bg-surface p-4 shadow-md sm:p-8"
                 >
                   <h2
-                    className={`mb-2 text-lg font-semibold before:mr-2 before:font-bold before:text-secondary before:content-['/']`}
+                    className={`mb-2 text-lg font-semibold before:mr-2 before:font-bold before:text-accent before:content-['/']`}
                   >
                     {rule.rule}
                   </h2>

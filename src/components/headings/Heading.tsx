@@ -51,7 +51,7 @@ const Heading: React.FC<IHeading> = ({
         },
         <div
           className={`flex items-center gap-3 ${
-            decoration && "before:text-secondary before:content-['/']"
+            decoration && "before:text-accent before:content-['/']"
           } ${className}`}
         >
           {startIcon &&
