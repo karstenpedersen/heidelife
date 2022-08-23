@@ -13,7 +13,6 @@ const Home: NextPageWithLayout = () => {
         <meta name="description" content="Heidelife.dk's forside" />
         <meta name="og:description" content="Dansk Minecraft Server" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <HeroSection />
       <AboutSection />
