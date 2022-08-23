@@ -8,6 +8,7 @@ export interface IIconText {
   className?: string;
   textClassName?: string;
   iconClassName?: string;
+  stayInTop?: boolean;
 }
 
 const IconText: React.FC<IIconText> = ({
@@ -17,12 +18,13 @@ const IconText: React.FC<IIconText> = ({
   className,
   textClassName,
   iconClassName,
+  stayInTop = false,
 }) => {
   return (
     <div className={`flex items-center gap-2 transition-all ${className}`}>
       {startIcon &&
         createElement(startIcon, {
-          className: `text-lg ${iconClassName}`,
+          className: `text-lg ${stayInTop && "mb-auto mt-1"} ${iconClassName}`,
         })}
       {text && <p className={`${textClassName}`}>{text}</p>}
       {endIcon &&

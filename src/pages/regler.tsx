@@ -39,10 +39,14 @@ const Rules: NextPageWithLayout<{ rules: Rule[] }> = ({ rules }) => {
                   key={index}
                   className="rounded bg-surface p-4 shadow-md sm:p-8"
                 >
-                  <h2 className="mb-2 text-lg font-semibold">{rule.rule}</h2>
+                  <h2
+                    className={`mb-2 text-lg font-semibold before:mr-2 before:font-bold before:text-secondary before:content-['/']`}
+                  >
+                    {rule.rule}
+                  </h2>
                   <p>{rule.description}</p>
                   {rule.note && (
-                    <p className="mt-4 text-zinc-500">Note: {rule.note}</p>
+                    <p className="mt-4 text-zinc-300">Note: {rule.note}</p>
                   )}
                 </div>
               );

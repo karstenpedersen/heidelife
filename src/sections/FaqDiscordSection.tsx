@@ -19,7 +19,7 @@ const FaqDiscordSection: React.FC<IFaqDiscordSection> = () => {
               href="https://discord.gg/NBppK3W76m"
               endIcon={FaExternalLinkAlt}
               text="Gå til Heidelife Discord"
-              className="rounded bg-primary px-6 py-4 font-semibold text-surface hover:bg-primary-variant"
+              className="rounded bg-primary px-6 py-4 font-semibold text-light hover:bg-primary-variant"
             />
           </div>
         </Wrapper>

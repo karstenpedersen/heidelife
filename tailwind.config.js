@@ -14,6 +14,7 @@ module.exports = {
         secondary: "var(--color-secondary)",
         "secondary-variant": "var(--color-secondary-variant)",
         dark: "var(--color-dark)",
+        light: "var(--color-light)",
         gray: "var(--color-gray)",
         background: "var(--color-background)",
         surface: "var(--color-surface)",

@@ -32,7 +32,7 @@ const FAQ: NextPageWithLayout<{
       <TitleSection title={faqContainer.title} />
 
       {/* FAQ */}
-      <section id="svar" className="bg-surface py-10 sm:py-14 lg:bg-background">
+      <section id="svar" className="bg-light py-10 sm:py-14 lg:bg-background">
         <Wrapper className="relative flex gap-6">
           <FaqSidebar
             allFaqContainers={allFaqContainers}
@@ -42,7 +42,7 @@ const FAQ: NextPageWithLayout<{
           />
 
           {/* Content */}
-          <div className="prose prose-zinc h-full w-full rounded-md bg-surface sm:prose-lg md:prose-xl lg:min-h-[400px] lg:!max-w-none lg:py-10 lg:px-16 lg:shadow-md">
+          <div className="prose prose-orange h-full w-full rounded-md bg-light sm:prose-lg md:prose-xl lg:min-h-[400px] lg:!max-w-none lg:py-10 lg:px-16 lg:shadow-md">
             <h1>{faq.question}</h1>
             <Component />
           </div>

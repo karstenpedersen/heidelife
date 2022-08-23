@@ -25,7 +25,7 @@ const FaqCategory: NextPageWithLayout<{
         <meta name="viewport" content="width=device-width, initial-scale=2.0" />
       </Head>
       <TitleSection title={faqContainer.title} />
-      <section id="faq" className="bg-surface py-10 sm:py-14 lg:bg-background">
+      <section id="faq" className="bg-light py-10 sm:py-14 lg:bg-background">
         <Wrapper>
           <Wrapper className="relative flex gap-6">
             <FaqSidebar
@@ -36,13 +36,15 @@ const FaqCategory: NextPageWithLayout<{
             />
 
             {/* Content */}
-            <ul className="prose prose-zinc h-full w-full divide-y-2 divide-zinc-300 rounded-md bg-surface lg:min-h-[400px] lg:!max-w-none lg:py-10 lg:px-16 lg:shadow-md">
+            <ul className="prose prose-zinc h-full w-full divide-y-2 divide-zinc-300 rounded-md bg-light lg:min-h-[400px] lg:!max-w-none lg:py-10 lg:px-16 lg:shadow-md">
               {categoryFaqs.map((faq, index) => {
                 return (
                   <li key={index}>
                     <Link href={`/faq/${faqContainer.category}/${faq.slug}`}>
-                      <a className="!no-underline hover:!underline">
-                        <h2 className="!mb-0 !mt-2">{faq.question}</h2>
+                      <a className="!no-underline hover:!text-secondary hover:!underline">
+                        <h2 className="!mb-0 !mt-2 transition-colors hover:!text-secondary">
+                          {faq.question}
+                        </h2>
                       </a>
                     </Link>
                     <p className="mt-1">{faq.description}</p>

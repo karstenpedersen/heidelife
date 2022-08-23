@@ -11,6 +11,7 @@ export interface IInternalIconLink {
   textClassName?: string;
   iconClassName?: string;
   variant?: "primary" | "secondary";
+  stayInTop?: boolean;
 }
 
 const InternalIconLink: React.FC<IInternalIconLink> = ({
@@ -21,6 +22,7 @@ const InternalIconLink: React.FC<IInternalIconLink> = ({
   className,
   textClassName,
   iconClassName,
+  stayInTop = false,
 }) => {
   return (
     <Link href={href}>
@@ -32,6 +34,7 @@ const InternalIconLink: React.FC<IInternalIconLink> = ({
           className={className}
           textClassName={`${textClassName}`}
           iconClassName={`${iconClassName}`}
+          stayInTop={stayInTop}
         />
       </a>
     </Link>

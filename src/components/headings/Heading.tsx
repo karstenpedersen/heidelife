@@ -29,6 +29,7 @@ export interface IHeading {
   className?: string;
   titleClassName?: string;
   iconClassName?: string;
+  decoration?: boolean;
 }
 
 const Heading: React.FC<IHeading> = ({
@@ -39,15 +40,20 @@ const Heading: React.FC<IHeading> = ({
   className,
   titleClassName,
   iconClassName,
+  decoration = true,
 }) => {
   return (
     <>
       {createElement(
         headingType,
         {
-          className: `text-inherit ${titleClassName} ${headingClasses[headingType]}`,
+          className: `text-inherit relative ${titleClassName} ${headingClasses[headingType]}`,
         },
-        <div className={`flex items-center gap-3 ${className}`}>
+        <div
+          className={`flex items-center gap-3 ${
+            decoration && "before:text-secondary before:content-['/']"
+          } ${className}`}
+        >
           {startIcon &&
             createElement(startIcon, {
               className: `${iconClassName} ${iconClasses[headingType]}`,

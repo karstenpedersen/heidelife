@@ -37,7 +37,7 @@ const FaqContainer: React.FC<IFaqContainer> = ({ title, items, iconTitle }) => {
     <div className="flex gap-6 rounded bg-surface p-4 shadow-md sm:p-8">
       <div className="hidden sm:block md:hidden lg:block">
         {createElement(icons[iconTitle], {
-          className: `text-4xl`,
+          className: `text-4xl text-light`,
         })}
       </div>
       <div className="w-full">
@@ -47,13 +47,14 @@ const FaqContainer: React.FC<IFaqContainer> = ({ title, items, iconTitle }) => {
             return (
               <li
                 key={index}
-                className="w-full rounded bg-zinc-50 transition-colors hover:bg-secondary hover:text-surface"
+                className="relative z-20 w-full text-light hover:text-secondary"
               >
                 <InternalIconLink
                   href={`/faq/${item.category}/${item.slug}`}
                   text={item.question}
                   startIcon={FaFileAlt}
-                  className="px-2 py-2"
+                  className="px-1 py-[1px]"
+                  stayInTop
                 />
               </li>
             );

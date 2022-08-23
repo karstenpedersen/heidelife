@@ -37,12 +37,13 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 z-50 h-[90px] w-full  bg-white transition-all ${
-          showBg
-            ? "bg-opacity-100 text-inherit shadow-md"
-            : "bg-opacity-0 text-white"
-        }`}
+        className={`fixed top-0 left-0 z-50 h-[90px] w-full  transition-all `}
       >
+        <div
+          className={`absolute top-0 bottom-0 left-0 right-0 -z-10 bg-background text-white ${
+            showBg ? "opacity-100 shadow-md" : "opacity-0"
+          }`}
+        />
         <Wrapper className="flex items-center justify-between text-lg font-semibold">
           <div className="flex items-center gap-6">
             <Link href="/">
@@ -58,14 +59,14 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
             <div className="hidden items-center gap-7 md:flex">
               <Navigation
                 className="flex gap-7"
-                itemClassName="hover:!text-primary transition-colors"
+                itemClassName="hover:!text-secondary transition-colors"
               />
               <li className="list-none">
                 <IconLink
                   text="Butik"
                   startIcon={FaShoppingCart}
                   href="https://heidelife.tebex.io/"
-                  className="transition-colors hover:text-primary"
+                  className="transition-colors hover:text-secondary"
                 />
               </li>
               <li className="list-none">
@@ -73,7 +74,7 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
                   text="Discord"
                   startIcon={FaDiscord}
                   href="https://discord.gg/NBppK3W76m"
-                  className="transition-colors hover:text-primary"
+                  className="transition-colors hover:text-secondary"
                 />
               </li>
             </div>
@@ -85,7 +86,7 @@ const Header: React.FC<IHeader> = ({ ..._ }) => {
           />
 
           <HiMenuAlt3
-            className="text-[42px] transition-colors hover:text-primary md:hidden"
+            className="text-[42px] transition-colors hover:text-secondary md:hidden"
             role="button"
             onClick={toggleMobileNav}
           />

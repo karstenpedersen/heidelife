@@ -23,7 +23,7 @@ const Contacts: React.FC<IContacts> = ({ className, itemClassName }) => {
           href="https://www.twitch.tv/Heidemann"
           target={"_blank"}
           rel="noreferrer"
-          className={`hover:text-[#7949c0] ${itemClassName ?? itemClassName}`}
+          className={`hover:text-[#8a43f2] ${itemClassName ?? itemClassName}`}
         >
           <FaTwitch />
         </a>
