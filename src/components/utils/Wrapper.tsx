@@ -8,21 +8,13 @@ export interface IWrapper extends React.ComponentPropsWithoutRef<'div'> {
 
 const Wrapper: React.FC<IWrapper> = ({
   children,
-  className,
-  containerClassName,
+  className = '',
+  containerClassName = '',
   ..._
 }) => {
   return (
-    <div
-      className={`h-full w-full bg-inherit ${
-        containerClassName ?? containerClassName
-      }`}
-    >
-      <div
-        className={`mx-auto h-full w-[90vw] max-w-[75rem] ${
-          className ?? className
-        }`}
-      >
+    <div className={`h-full w-full bg-inherit ${containerClassName}`}>
+      <div className={`mx-auto h-full w-[90vw] max-w-[75rem] ${className}`}>
         {children}
       </div>
     </div>

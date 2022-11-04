@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import ImageBackground from '../components/utils/ImageBackground';
 import IpButton from '../components/utils/IpButton';
+import Section from '../components/utils/Section';
 
 const scaleVariants = {
   small: { width: '50%', height: '50%' },
@@ -24,38 +24,41 @@ export interface IHeroSection {}
 
 const HeroSection: React.FC<IHeroSection> = () => {
   return (
-    <section id="hero" className="h-screen">
-      <ImageBackground imageSrc="/images/backgrounds/sky.png" darkBg>
-        <div className="flex h-full flex-col items-center justify-center">
-          <div className="flex h-[260px] w-[260px] items-center justify-center transition-all sm:h-[400px] sm:w-[400px] lg:h-[420px] lg:w-[420px]">
-            <motion.div
-              variants={scaleVariants}
-              initial="small"
-              animate="large"
-              transition={{
-                duration: 1,
-              }}
-              className="relative"
-            >
-              <Image
-                src="/images/logos/logo-detailed.png"
-                alt=""
-                layout="fill"
-                priority
-              />
-            </motion.div>
-          </div>
-
+    <Section
+      id="hero"
+      className="h-screen"
+      padding={false}
+      backgroundImgSrc="/images/backgrounds/sky.png"
+    >
+      <div className="flex h-full flex-col items-center justify-center">
+        <div className="flex h-[260px] w-[260px] items-center justify-center transition-all sm:h-[400px] sm:w-[400px] lg:h-[420px] lg:w-[420px]">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            variants={scaleVariants}
+            initial="small"
+            animate="large"
+            transition={{
+              duration: 1,
+            }}
+            className="relative"
           >
-            <IpButton />
+            <Image
+              src="/images/logos/logo-detailed.png"
+              alt=""
+              layout="fill"
+              priority
+            />
           </motion.div>
         </div>
-      </ImageBackground>
-    </section>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <IpButton />
+        </motion.div>
+      </div>
+    </Section>
   );
 };
 

@@ -1,12 +1,13 @@
 import Heading from '../components/headings/Heading';
 import ImageSplitter from '../components/utils/ImageSplitter';
+import Section from '../components/utils/Section';
 import Wrapper from '../components/utils/Wrapper';
 
 export interface IAboutSection {}
 
 const AboutSection: React.FC<IAboutSection> = () => {
   return (
-    <section id="om-os" className="bg-background py-10 sm:py-14">
+    <Section id="om-os">
       <Wrapper>
         <ImageSplitter
           imageSrc="/images/backgrounds/lobby.png"
@@ -35,7 +36,7 @@ const AboutSection: React.FC<IAboutSection> = () => {
           </p>
         </ImageSplitter>
       </Wrapper>
-    </section>
+    </Section>
   );
 };
 
