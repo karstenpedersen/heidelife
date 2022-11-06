@@ -1,4 +1,4 @@
-import { Rule } from '../src/utils/types/rules';
+import { Rule } from '../utils/types/rules';
 
 export const ruleData: Rule[] = [
   {

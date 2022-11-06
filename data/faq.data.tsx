@@ -1,4 +1,4 @@
-import { FaqContainer } from '../src/utils/types/faq-container';
+import { FaqContainer } from '../utils/types/faq-container';
 
 export const faqContainerData: FaqContainer[] = [
   {

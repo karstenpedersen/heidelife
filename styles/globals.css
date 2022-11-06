@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Theme colors */
+  --color-dark: 24 24 27;
+  --color-gray: 113 113 122;
+  --color-light-gray: 241 241 241;
+  --color-white: 255 255 255;
+  --color-blue-900: 17 21 59;
+  --color-blue-800: 27 32 86;
+  --color-blue-700: 41 48 111;
+
+  --color-blue-600: 55 57 138;
+
+  /* Stuff */
+  --color-text: var(--color-white);
+  --color-text-soft: var(--color-text);
+
+  /* White Theme */
+  --color-accent: 240 123 56;
+  --color-accent-variant: 240 123 56;
+  --color-accent-front: var(--color-text);
+
+  --color-accent-2: 69 160 209; /*95 211 255*/
+
+  --color-body: var(--color-white);
+  --color-body-front: var(--color-dark);
+  --color-body-front-soft: 240 123 56;
+
+  --color-section: var(--color-white);
+  --color-section-front: var(--color-dark);
+  --color-section-front-soft: var(--color-light-gray);
+
+  --color-surface: var(--color-light-gray);
+  --color-surface-front: var(--color-dark);
+  --color-surface-front-soft: var(--color-gray);
+
+  --color-header: var(--color-dark);
+  --color-header-front: var(--color-text);
+  --color-header-front-soft: var(--color-gray);
+  --color-header-front-hover: var(--color-accent);
+
+  --color-footer: var(--color-dark);
+  --color-footer-front: var(--color-text);
+  --color-footer-front-soft: var(--color-gray);
+  --color-footer-front-hover: var(--color-accent);
+
+  /* Blue Theme */
+  /* --color-accent: 240 123 56;
+  --color-accent-variant: 240 123 56;
+  --color-accent-front: var(--color-text);
+
+  --color-body: var(--color-blue-800);
+  --color-body-front: var(--color-white);
+  --color-body-front-soft: 240 123 56;
+
+  --color-section: var(--color-blue-800);
+  --color-section-front: var(--color-white);
+  --color-section-front-soft: 240 123 56;
+
+  --color-surface: var(--color-blue-700);
+  --color-surface-front: var(--color-text);
+  --color-surface-front-soft: 240 123 56;
+
+  --color-header: var(--color-blue-900);
+  --color-header-front: var(--color-text);
+  --color-header-front-soft: var(--color-text-soft);
+  --color-header-front-hover: var(--color-accent);
+
+  --color-footer: var(--color-blue-900);
+  --color-footer-front: var(--color-text);
+  --color-footer-front-soft: var(--color-blue-600);
+  --color-footer-front-hover: var(--color-accent); */
+}
+
+body {
+  @apply bg-body text-body-front selection:bg-accent selection:text-accent-front;
+}
+
+/* .wrapper {
+  @apply mx-auto h-full w-[90vw] max-w-[75rem];
+} */
+
+.wrapper {
+  @apply grid w-full grid-flow-row auto-rows-max grid-cols-[minmax(0,1200px)] justify-center px-[2.5vw];
+}
+
+/* Titles */
+.parent-title {
+  @apply font-bold;
+}
+
+.title-1 {
+  @apply parent-title text-5xl;
+}
+.title-2 {
+  @apply parent-title text-4xl;
+}
+.title-3 {
+  @apply parent-title text-3xl;
+}
+.title-4 {
+  @apply parent-title text-2xl;
+}
+.title-5 {
+  @apply parent-title text-xl;
+}
+.title-6 {
+  @apply parent-title text-lg;
+}

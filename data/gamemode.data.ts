@@ -1,4 +1,4 @@
-import { Gamemode } from '../src/utils/types/gamemode';
+import { Gamemode } from '../utils/types/gamemode';
 
 export const gamemodeData: Gamemode[] = [
   {
@@ -9,12 +9,13 @@ export const gamemodeData: Gamemode[] = [
   },
   {
     title: 'Skyblock',
-    description: 'Kommer snart',
+    description:
+      'Saml ressourcer på nye måder og udvikl din ø i skyerne. Du kan også slutte dig sammen med dine venner, hvor i kan samarbejde om at opsætte jeres eget skyimperium.',
     imageSrc: '/images/games/skyblock-banner.png',
   },
   {
     title: 'Prison',
-    description: 'Under udvikling',
+    description: 'Under udvikling.',
     imageSrc: '/images/games/prison-banner.png',
   },
 ];
