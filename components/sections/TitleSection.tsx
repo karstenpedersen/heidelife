@@ -18,9 +18,9 @@ const TitleSection: React.FC<ITitleSection> = ({
       id="title"
       className="h-[250px] md:h-[300px]"
       padding={false}
-      background="bg-header"
+      background="bg-accent-2"
     >
-      <Wrapper className="flex flex-col items-center justify-center gap-7 pt-[60px] text-header-frontSoft ">
+      <Wrapper className="flex flex-col items-center justify-center gap-7 pt-[60px] text-accent-front ">
         {children ? (
           children
         ) : (

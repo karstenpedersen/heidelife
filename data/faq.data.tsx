@@ -1,5 +1,6 @@
 import { FaqContainer } from '../utils/types/faq-container';
 
+// FAQ categories
 export const faqContainerData: FaqContainer[] = [
   {
     id: 0,

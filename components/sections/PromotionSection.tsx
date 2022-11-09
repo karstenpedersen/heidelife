@@ -10,11 +10,11 @@ const PromotionSection: React.FC<IPromotionSection> = () => {
     <Section
       id="promotion"
       className="relative h-[350px]"
-      background="bg-accent"
+      background="bg-gradient-to-b from-section to-footer"
     >
       <Wrapper className="flex flex-col items-center justify-center gap-4">
         <Heading title="Spil nu på" className="!text-4xl text-accent-front" />
-        <IpButton size="lg" variant="secondary" />
+        <IpButton size="lg" variant="primary" />
       </Wrapper>
     </Section>
   );
