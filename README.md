@@ -11,4 +11,10 @@ FTP_HOST=hostname.here
 FTP_PORT=21
 ```
 
-After this run `npm run deploy` in the terminal.
+Then run `npm run deploy`. This will build, export and upload the project.
+
+or
+
+1. Run `npm run export`.
+2. Open a FTP program.
+3. Move content of `./out` to FTP-server.

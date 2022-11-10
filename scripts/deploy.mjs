@@ -6,6 +6,7 @@ dotenv.config({ path: './.env' });
 async function main() {
   try {
     // Replace "/out" with your build directory which contains all generated static files
+    console.log(process.cwd());
     const outDir = path.join(process.cwd(), '/out');
 
     await new FtpDeploy().deploy({
